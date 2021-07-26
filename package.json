@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"./**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
@@ -22,6 +23,7 @@
     "@types/react": "^17.0.15",
     "eslint": "^7.31.0",
     "eslint-config-next": "^11.0.1",
+    "prettier": "^2.3.2",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
     "typescript": "4.3.5"
