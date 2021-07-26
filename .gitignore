@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# npm lockfile (we use yarn)
+package-lock.json
+
 # testing
 /coverage
 
@@ -32,3 +35,12 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# ESLint
+.eslintcache
+
+# IntelliJ
+.idea/
+
+# Local Netlify folder
+.netlify
