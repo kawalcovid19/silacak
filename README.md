@@ -1,6 +1,12 @@
 # SILACAK
-
 A progressive web app (PWA) to track COVID19 cases.
+This is a revamp attemp of Silacak app, built using [Next.js](https://nextjs.org/).
+
+## Requirement Specifications
+
+### UI/UX Design
+
+- [Figma file](https://www.figma.com/file/a4l6zqfnLyjG9h9Qyj6QsE/Silacak)
 
 ## Purpose and Principles
 
@@ -20,7 +26,6 @@ Setting Up Silacak in Local.
 This is an installation guide for developers before start the project:
 Prerequisite:
 
-1.
 
 ## Getting Started
 
