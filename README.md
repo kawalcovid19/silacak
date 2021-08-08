@@ -1,4 +1,12 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Silacak
+
+This is a revamp attemp of Silacak app, built using [Next.js](https://nextjs.org/).
+
+## Requirement Specifications
+
+### UI/UX Design
+
+- [Figma file](https://www.figma.com/file/a4l6zqfnLyjG9h9Qyj6QsE/Silacak)
 
 ## Getting Started
 
