@@ -8,25 +8,36 @@ This is a revamp attemp of Silacak app, built using [Next.js](https://nextjs.org
 
 - [Figma file](https://www.figma.com/file/a4l6zqfnLyjG9h9Qyj6QsE/Silacak)
 
+## Purpose and Principles
+
+### Principles
+
+The project's principles take some cues from the principles from the [WargaBantuWarga.com](https://www.wargabantuwarga.com/) project. Please [read these principles](https://github.com/kawalcovid19/wargabantuwarga.com/blob/main/README.md#principles) if you want to contribute to the project.
+
 ## Getting Started
 
-First, run the development server:
+First, clone the repository:
 
 ```bash
-npm run dev
-# or
+git clone https://github.com/kawalcovid19/silacak.git
+```
+
+Then, install dependencies and fetch data to your local machine:
+
+```bash
+cd silacak
+yarn install
+```
+
+Finally, run the development server:
+
+```bash
 yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
+### Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -35,8 +46,17 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+### Frequently Used Tools
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Measure Web Performance](https://web.dev/measure)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Tailwind UI](https://tailwindui.com/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+See our contribution guidelines in these languages:
+
+- [English](CONTRIBUTING.md)
+- [Indonesian](CONTRIBUTING_ID.md)
+
+When contributing to our project, please use English when communicating with other people in issues and/or pull requests. [Click here](CONTRIBUTING.md#why-are-we-using-english-in-our-issues--prs) to read why. ([Bahasa Indonesia](CONTRIBUTING_ID.md#mengapa-kita-menggunakan-bahasa-inggris-dalam-menulis-issue-dan-pull-request))
