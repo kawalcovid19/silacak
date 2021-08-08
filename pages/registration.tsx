@@ -3,6 +3,7 @@ import { LayoutRoot } from "~/components/layout/home";
 import { ContentBoard } from "~/components/ui/board/content-board/content-board";
 import { FormTitle } from "~/components/ui/form/form-title/form-title";
 import { FormSubtitle } from "~/components/ui/form/form-subtitle/form-subtitle";
+import { TextInput } from "~/components/ui/form/text-input/text-input";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ContentBoard className="p-8 my-4">
         <FormTitle>Pendaftaran Tracer</FormTitle>
         <FormSubtitle>Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda</FormSubtitle>
+        <TextInput placeholder="Test" />
       </ContentBoard>
     </LayoutRoot>
   );
