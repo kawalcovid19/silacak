@@ -1,6 +1,8 @@
 import Head from "next/head";
 import { LayoutRoot } from "~/components/layout/home";
 import { ContentBoard } from "~/components/ui/board/content-board/content-board";
+import { FormTitle } from "~/components/ui/form/form-title/form-title";
+import { FormSubtitle } from "~/components/ui/form/form-subtitle/form-subtitle";
 
 export default function Home() {
   return (
@@ -13,7 +15,10 @@ export default function Home() {
         />
         <link href="/favicon.ico" rel="icon" />
       </Head>
-      <ContentBoard className="p-8 my-4">A</ContentBoard>
+      <ContentBoard className="p-8 my-4">
+        <FormTitle>Pendaftaran Tracer</FormTitle>
+        <FormSubtitle>Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda</FormSubtitle>
+      </ContentBoard>
     </LayoutRoot>
   );
 }
