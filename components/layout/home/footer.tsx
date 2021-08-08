@@ -7,7 +7,11 @@ export type FooterProps = Omit<HTMLAttributes<HTMLElement>, "children">;
 
 export const Footer = forwardRef<HTMLElement, FooterProps>(({ className, ...rest }, ref) => {
   return (
-    <footer className={clsx("bg-gray-100 px-6 py-4", className)} ref={ref} {...rest}>
+    <footer
+      className={clsx("bg-gray-100 px-4 sm:px-6 lg:px-8 py-4", className)}
+      ref={ref}
+      {...rest}
+    >
       <Container className="flex flex-col-reverse items-center space-y-4 space-y-reverse md:flex-row md:justify-between md:space-y-0">
         <div className="text-gray-700 text-center text-sm">
           <p>Copyright &copy; 2021 Silacak v3.0 | Kementerian Kesehatan Republik Indonesia.</p>
