@@ -769,6 +769,11 @@
     "@types/yargs" "^16.0.0"
     chalk "^4.0.0"
 
+"@kawalcovid19/tailwind-preset-wbw@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@kawalcovid19/tailwind-preset-wbw/-/tailwind-preset-wbw-0.1.0.tgz#b725f0e4895060add1ea9d8cdca8634b451c0e47"
+  integrity sha512-6TrvZyhzKm7dBSqDTIeSx2Xn1Zojq2cNsVbOCg00O46Be3+CY0yUFA/jR6mbkTvpIU8IikNlH7ROcn/3G5SSJQ==
+
 "@next/env@11.0.1":
   version "11.0.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-11.0.1.tgz#6dc96ac76f1663ab747340e907e8933f190cc8fd"
