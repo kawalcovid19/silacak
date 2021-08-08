@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"**/*.{js,jsx,ts,tsx}\"",
-    "format": "prettier --write \"./**/*.{ts,tsx}\" \"./*.config.{js,ts}\""
+    "format": "prettier --write \"./**/*.{ts,tsx}\" \"./*.config.{js,ts}\"",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
