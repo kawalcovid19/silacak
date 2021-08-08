@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import HomePage from '~/pages';
+import HomePage from "~/pages";
 
-import { render, screen } from '@testing-library/react';
+import { render, screen } from "@testing-library/react";
 
-describe('HomePage', () => {
+describe("HomePage", () => {
   // TODO: add proper tests later
-  it('renders without crashing', () => {
+  it("renders without crashing", () => {
     render(<HomePage />);
 
     expect(screen.getByText(/Welcome to/i)).toBeVisible();
