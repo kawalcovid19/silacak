@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { LayoutRoot } from "~/components/layout/home";
+import { HomePageContent } from "~/components/layout/home/home-content";
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <link href="/favicon.ico" rel="icon" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <HomePageContent>
         <h1 className="text-6xl font-bold">
           Welcome to{" "}
           <a className="text-brand-500" href="https://nextjs.org">
@@ -64,7 +65,7 @@ export default function Home() {
             </p>
           </a>
         </div>
-      </main>
+      </HomePageContent>
     </LayoutRoot>
   );
 }
