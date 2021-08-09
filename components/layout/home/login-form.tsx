@@ -1,4 +1,5 @@
 import { useState, FormEvent } from "react";
+import { FormLabel, InputText } from "~/components/ui/forms";
 
 export interface LoginFormValues {
   username: string;
@@ -25,13 +26,12 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
   return (
     <form action="#" className="space-y-4" method="POST" onSubmit={handleSubmit}>
       <div>
-        <label className="block text-sm font-medium text-gray-700" htmlFor="username">
+        <FormLabel className="block text-sm font-medium text-gray-700" htmlFor="username">
           Nama ID yang terdaftar / User Name
-        </label>
+        </FormLabel>
         <div className="mt-1">
-          <input
+          <InputText
             autoComplete="off"
-            className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-silacak-500 focus:border-silacak-500 sm:text-sm"
             id="username"
             name="username"
             onChange={e => setUsername(e.target.value)}
@@ -43,13 +43,12 @@ export function LoginForm({ onSubmit }: LoginFormProps) {
       </div>
 
       <div>
-        <label className="block text-sm font-medium text-gray-700" htmlFor="password">
+        <FormLabel className="block text-sm font-medium text-gray-700" htmlFor="password">
           Kata Sandi / Password
-        </label>
+        </FormLabel>
         <div className="mt-1">
-          <input
+          <InputText
             autoComplete="current-password"
-            className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-silacak-500 focus:border-silacak-500 sm:text-sm"
             id="password"
             name="password"
             onChange={e => setPassword(e.target.value)}
