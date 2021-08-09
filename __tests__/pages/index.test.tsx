@@ -3,6 +3,7 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import HomePage from "~/pages";
+import { authBuilder } from "~/components/layout/home/__mocks__/builders/auth";
 
 jest.mock("next/router", () => require("next-router-mock"));
 
@@ -20,22 +21,24 @@ describe("HomePage", () => {
   });
 
   it("submits form correctly", () => {
+    const { username, password } = authBuilder();
+
     render(<HomePage />);
 
     userEvent.type(
       screen.getByRole("textbox", {
         name: /nama id yang terdaftar \/ user name/i,
       }),
-      "seseorang"
+      username
     );
 
-    userEvent.type(screen.getByLabelText(/kata sandi \/ password/i), "kata s4ndi");
+    userEvent.type(screen.getByLabelText(/kata sandi \/ password/i), password);
 
     const consoleLogSpy = jest.spyOn(console, "log").mockImplementation(() => {});
 
     userEvent.click(screen.getByRole("button", { name: /masuk/i }));
 
     expect(consoleLogSpy).toHaveBeenCalledTimes(1);
-    expect(consoleLogSpy).toHaveBeenCalledWith("seseorang", "kata s4ndi");
+    expect(consoleLogSpy).toHaveBeenCalledWith(username, password);
   });
 });
