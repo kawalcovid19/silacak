@@ -13,9 +13,9 @@ export default function Home() {
 
       <HomePageContent>
         <h1 className="text-6xl font-bold">
-          Welcome to{" "}
+          Selamat datang di layanan
           <a className="text-brand-500" href="https://nextjs.org">
-            Next.js!
+            Silacak v3.0
           </a>
         </h1>
 

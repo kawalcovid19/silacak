@@ -10,6 +10,6 @@ describe("HomePage", () => {
   it("renders without crashing", () => {
     render(<HomePage />);
 
-    expect(screen.getByText(/Welcome to/i)).toBeVisible();
+    expect(screen.getByText(/selamat datang di layanan/i)).toBeVisible();
   });
 });
