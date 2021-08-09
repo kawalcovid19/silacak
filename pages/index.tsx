@@ -1,13 +1,11 @@
 import Head from "next/head";
 import { ExclamationCircleIcon } from "@heroicons/react/outline";
 import { Container } from "~/components/ui/container";
-import { LayoutRoot, LoginForm, LoginFormValues } from "~/components/layout/home";
+import { LayoutRoot, LoginForm } from "~/components/layout/home";
 import { HomePageContent } from "~/components/layout/home/home-content";
 
 export default function Home() {
-  const handleSubmit = ({ username, password }: LoginFormValues) => {
-    console.log(username, password);
-  };
+  const handleSubmit = () => {};
 
   return (
     <LayoutRoot>
