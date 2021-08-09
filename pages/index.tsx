@@ -1,8 +1,12 @@
 import Head from "next/head";
-import { LayoutRoot } from "~/components/layout/home";
+import { ExclamationCircleIcon } from "@heroicons/react/outline";
+import { Container } from "~/components/ui/container";
+import { LayoutRoot, LoginForm } from "~/components/layout/home";
 import { HomePageContent } from "~/components/layout/home/home-content";
 
 export default function Home() {
+  const handleSubmit = () => {};
+
   return (
     <LayoutRoot>
       <Head>
@@ -12,59 +16,51 @@ export default function Home() {
       </Head>
 
       <HomePageContent>
-        <h1 className="text-6xl font-bold">
-          Welcome to{" "}
-          <a className="text-brand-500" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
+        <Container className="flex flex-row py-12">
+          <div className="flex-1">
+            <div className="w-full max-w-md mx-auto space-y-6 md:space-y-12">
+              <header className="space-y-1">
+                <span className="text-gray-600 uppercase">Selamat datang di layanan</span>
+                <h1 className="text-6xl text-silacak-600 font-bold">Silacak 3.0</h1>
+              </header>
+              <div className="space-y-4">
+                <LoginForm onSubmit={handleSubmit} />
 
-        <p className="mt-3 text-2xl">
-          Get started by editing{" "}
-          <code className="p-3 font-mono text-lg bg-gray-100 rounded-md">pages/index.js</code>
-        </p>
-
-        <div className="flex flex-wrap items-center justify-around max-w-4xl mt-6 sm:w-full">
-          <a
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            href="https://nextjs.org/docs"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and API.
-            </p>
-          </a>
-
-          <a
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            href="https://nextjs.org/learn"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
-            </p>
-          </a>
-
-          <a
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            href="https://github.com/vercel/next.js/tree/master/examples"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
-            </p>
-          </a>
-
-          <a
-            className="p-6 mt-6 text-left border w-96 rounded-xl hover:text-blue-600 focus:text-blue-600"
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+                <div className="space-y-4">
+                  <div className="bg-silacak-50 border-l-4 border-silacak-400 p-4">
+                    <div className="flex">
+                      <div className="flex-shrink-0">
+                        <ExclamationCircleIcon
+                          aria-hidden="true"
+                          className="h-5 w-5 text-silacak-400"
+                        />
+                      </div>
+                      <div className="ml-3 space-y-1">
+                        <p className="text-sm text-silacak-700">
+                          Mengalami kesulitan dalam login?{" "}
+                          <a
+                            className="font-medium underline text-silacak-700 hover:text-silacak-600"
+                            href="#"
+                          >
+                            Hubungi Help Desk.
+                          </a>
+                        </p>
+                        <p className="text-sm text-silacak-700">
+                          Jam Operasional Helpdesk:{" "}
+                          <span className="font-medium">08:00 - 17:00 WIB</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hidden lg:block ml-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img alt="Ilustrasi Silacak" src="/images/silacak-illust.svg" />
+          </div>
+        </Container>
       </HomePageContent>
     </LayoutRoot>
   );
