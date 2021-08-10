@@ -1,6 +1,6 @@
 # Silacak
 
-This is a revamp attemp of Silacak app, built using [Next.js](https://nextjs.org/).
+This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.org/).
 
 ## Requirement Specifications
 
