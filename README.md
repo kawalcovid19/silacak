@@ -63,4 +63,4 @@ When contributing to our project, please use English when communicating with oth
 
 ## API
 
-for api documentation, [click here](docs/api-reference.md)
+our API documentation is in [api-refrence.md](docs/api-reference.md) file.
