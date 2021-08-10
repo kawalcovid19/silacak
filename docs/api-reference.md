@@ -1,20 +1,30 @@
-## API
+## Silacak Api Docs
 
-
-# SILACAK API DOCS
-
-#### Base URL : `https://silacak.kemkes.go.id`
+ Base URL : `https://silacak.kemkes.go.id`
 
 ## Login
+
 Authorization: Basic base64encode(username:password)
 
 ### Check Login Status
+
 This endpoint will return "pong" if user successfully logged
-### HTTP Request ( GET )
+
+### CURL
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/system/ping' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+--header 'Cookie: BIGipServerpool_silacakprod_training_http=3945834688.47873.0000; SESSION=YmQ5NDY1MTAtN2YxZi00ZDI4LTgyODEtYzVjNzFiYTY3N2Y3'
+```
+
+### Example HTTP Request ( GET )
+
     api/system/ping
 
 ## List of Organization Units
+
 ### Field
+
 |Name|Description|
 |--|--|
 |displayName| organization name
@@ -23,6 +33,7 @@ This endpoint will return "pong" if user successfully logged
 |level| level organization
 
 ### Parameter
+
 |Name| Type  | Description|
 |--|--|--|
 |Paging|boolean| enable / disabled pagination
@@ -30,48 +41,59 @@ This endpoint will return "pong" if user successfully logged
 |Pagesize|number| total item for each page
 |Page|number| request page
 
+### CURL
+
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/organisationUnits?paging=true&fields=displayName,parent,id,level&pageSize=10&page=10' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU='
+```
 
 ### Example HTTP Request ( GET )
+
     /api/organisationUnits?paging=true&fields=displayName,parent,id,level&pageSize=10
 
+
 ### Example HTTP Response
+
 ```
 {
-	"pager": {
-	"page": 1,
-	"pageCount": 994,
-	"total": 9933,
-	"pageSize": 2,
-	"nextPage": "https://training-silacak.kemkes.go.id/api/organisationUnits?page=2&pageSize=10&paging=true&fields=displayName%2Cparent%2Cid%2Clevel"
+    "pager": {
+    "page": 1,
+    "pageCount": 994,
+    "total": 9933,
+    "pageSize": 2,
+    "nextPage": "https://training-silacak.kemkes.go.id/api/organisationUnits?page=2&pageSize=10&paging=true&fields=displayName%2Cparent%2Cid%2Clevel"
 },
 "organisationUnits": [
-		{
-			"level": 3,
-			"id": "MVPPtzjrsTp",
-			"displayName": "1101 - KAB. SIMEULUE",
-			"parent": {
-			"id": "nBOW2TBc1mn"
-		},
-		{
-			"level": 3,
-			"id": "TYbR3qLC9aX",
-			"displayName": "1102 - KAB. ACEH SINGKIL",
-			"parent": {
-			"id": "nBOW2TBc1mn"
-		}
-	]
+        {
+            "level": 3,
+            "id": "MVPPtzjrsTp",
+            "displayName": "1101 - KAB. SIMEULUE",
+            "parent": {
+            "id": "nBOW2TBc1mn"
+        },
+        {
+            "level": 3,
+            "id": "TYbR3qLC9aX",
+            "displayName": "1102 - KAB. ACEH SINGKIL",
+            "parent": {
+            "id": "nBOW2TBc1mn"
+        }
+    ]
 },
 ```
 
 ## List Puskesmas by City/District Code/Name
 
 ### Field
+
 |Name|Description|
 |--|--|
 |children| Puskesmas Detail
 |displayName| City / Distric name
 
 ### Children Field
+
 |Name|Description|
 |--|--|
 |displayName| Puskesmas Name
@@ -80,6 +102,7 @@ This endpoint will return "pong" if user successfully logged
 |path| -
 
 ### Parameter
+
 |Name| Type  | Description|
 |--|--|--|
 |filter|string| you can filter one of posible field, example : name:like:JAKARTA%20SELATAN
@@ -87,42 +110,49 @@ This endpoint will return "pong" if user successfully logged
 |Pagesize|number| total item for each page
 |Page|number| request page
 
+### CURL
 
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/organisationUnits.json?filter=name:like:JAKARTA%20SELATAN&pageSize=10&page=1' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU='
+```
 
 ### Example HTTP Request ( GET )
 
     /api/organisationUnits.json?filter=name:like:JAKARTA%20SELATAN&fields=children%5Bid%2CdisplayName%2Cchildren%3A%3AisNotEmpty%2Cpath%2Cparent%5D&pageSize=10&page=1
 
 ### Example HTTP Response
+
 ```
-{
-    "pager": {
-        "page": 1,
-        "pageCount": 1,
-        "total": 2,
-        "pageSize": 10
-    },
-    "organisationUnits": [
-        {
-            "children": [
-                {
-                    "id": "KECAM317409",
-                    "path": "/AWDfATa8TT1/pE2p1IwDLFD/CWKkrIzNOhX/KECAM317409",
-                    "children": true,
-                    "displayName": "KEC. JAGAKARSA",
-                    "parent": {
-			                     "id": "CWKkrIzNOhX"
-			                  }
-                },
-	           ]
-		     }
-		   ]
-		 }
+    {
+        "pager": {
+            "page": 1,
+            "pageCount": 1,
+            "total": 2,
+            "pageSize": 10
+        },
+        "organisationUnits": [
+            {
+                "children": [
+                    {
+                        "id": "KECAM317409",
+                        "path": "/AWDfATa8TT1/pE2p1IwDLFD/CWKkrIzNOhX/KECAM317409",
+                        "children": true,
+                        "displayName": "KEC. JAGAKARSA",
+                        "parent": {
+                         "id": "CWKkrIzNOhX"
+                      }
+                    },
+                  ]
+                }
+              ]
+            }
 
 ```
 ## User List at Puskesmas ( Filter by Puskesmas Name )
 
 ### Field
+
 |Name|Description|
 |--|--|
 |id| Puskesmas Id
@@ -131,6 +161,7 @@ This endpoint will return "pong" if user successfully logged
 |userCredentials| User Credential Detail
 
 ### Parameter
+
 |Name| Type  | Description|
 |--|--|--|
 |ou":like":< puskesmas name>|string| filter by puskesmas name
@@ -138,12 +169,19 @@ This endpoint will return "pong" if user successfully logged
 |Pagesize|number| total item for each page
 |Page|number| request page
 
+### CURL
+
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/users.json?ou":like":padurenan&fields=id,name,displayName,userCredentials&pageSize=1' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU='
+```
 
 ### Example HTTP Request ( GET )
 
     /api/users.json?ou":like":padurenan&fields=id,name,displayName,userCredentials
 
 ### Example HTTP Response
+
 ```
 {
     "pager": {
@@ -214,6 +252,7 @@ This endpoint will return "pong" if user successfully logged
 ## Detail User
 
 ### Field
+
 |Name|Description|
 |--|--|
 |lastUpdate| latest update date
@@ -233,15 +272,24 @@ This endpoint will return "pong" if user successfully logged
 |organisationUnits| User organization units
 
 ### Parameter
+
 |Name| Type  | Description|
 |--|--|--|
 |Fields|string| select one or more field to return possible value
 
+### CURL
+
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/users/BJmAkJrz62L.json?fields=%3Aowner%2Caccess%2CdisplayName%2CuserGroups%2CorganisationUnits%5Bid%2CdisplayName%2Cpath%5D%2CdataViewOrganisationUnits%5Bid%2CdisplayName%2Cpath%5D%2CuserCredentials%5Bid%2Cusername%2ClastLogin%2CexternalAuth%2CuserRoles%5Bid%2CdisplayName%5D%2CcogsDimensionConstraints%5Bid%2CdisplayName%2CdimensionType%5D%2CcatDimensionConstraints%5Bid%2CdisplayName%2CdimensionType%5D%2CopenId%2CldapId%5D%2CteiSearchOrganisationUnits%5Bid%2Cpath%5D%2CwhatsApp%2CfacebookMessenger%2Cskype%2Ctelegram%2Ctwitter' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU='
+```
 
 ### Example Request ( GET )
+
     /api/users/BJmAkJrz62L.json?fields=%3Aowner%2Caccess%2CdisplayName%2CuserGroups%2CorganisationUnits%5Bid%2CdisplayName%2Cpath%5D%2CdataViewOrganisationUnits%5Bid%2CdisplayName%2Cpath%5D%2CuserCredentials%5Bid%2Cusername%2ClastLogin%2CexternalAuth%2CuserRoles%5Bid%2CdisplayName%5D%2CcogsDimensionConstraints%5Bid%2CdisplayName%2CdimensionType%5D%2CcatDimensionConstraints%5Bid%2CdisplayName%2CdimensionType%5D%2CopenId%2CldapId%5D%2CteiSearchOrganisationUnits%5Bid%2Cpath%5D%2CwhatsApp%2CfacebookMessenger%2Cskype%2Ctelegram%2Ctwitter
 
 ### Example Response
+
 ```
 {
     "lastUpdated": "2021-08-09T12:34:43.640",
@@ -319,6 +367,7 @@ This endpoint will return "pong" if user successfully logged
 ## List Confirmed Cases
 
 ### Field
+
 |Name|Description|
 |--|--|
 |latesUpdate| latest update date
@@ -326,6 +375,7 @@ This endpoint will return "pong" if user successfully logged
 |trackedEntityInstance| -
 
 ### Parameter
+
 |Name| Type  | Description|
 |--|--|--|
 |Program|string| program id
@@ -336,10 +386,18 @@ This endpoint will return "pong" if user successfully logged
 |order|string| order by fields example : lasUpdated:DESC
 |programEndDate|string| program end date format yyyy-mm-dd
 
+### CURL
+
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances.json?program=gZrezya1BvN&fields=trackedEntityInstance,created,lastUpdated&pageSize=1&ou=IU2HDuYpTnY&programStatus=ACTIVE&programStartDate=2021-01-01&order=lastUpdated:DESC&programEndDate=2021-07-31' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU='
+```
+
 ### Example Request ( GET )
 
     /api/trackedEntityInstances.json?program=gZrezya1BvN&fields=trackedEntityInstance,created,lastUpdated&pageSize=1000&ou=IU2HDuYpTnY&programStatus=ACTIVE&programStartDate=2021-01-01&order=lastUpdated:DESC&programEndDate=2021-07-31
 ### Example Response
+
 ```
 {
     "trackedEntityInstances": [
@@ -353,12 +411,23 @@ This endpoint will return "pong" if user successfully logged
 ```
 
 ###  Request for get Close Contact Data List ( GET )
+
 since it using same tracketd entity instance, we can also get close contact data list, but with different params
 
-#### Request (GET)
+### CURL
+
+```
+curl --location -g --request GET 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances.json?program=QqodHvGgDrq&fields=created,lastUpdated,trackedEntityInstance,attributes[attribute,value],enrollments[program,followup,status]&ou=IU2HDuYpTnY&attribute=GdwLfGObIRT,taFkwTiKFyR,xu1Ukzi0PMJ,fk5drl1hTvc,YlOp8W4FYRH,mHwPpgxFDge&programStatus=ACTIVE&order=lastUpdated:DESC&page=1&pageSize=20&programStartDate=2021-06-26' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+--header 'Cookie: BIGipServerpool_silacakprod_training_http=3945834688.47873.0000; SESSION=YjlmNjdhOTEtZmE3Ny00NTcxLWExYzYtMTU1OWQ2ODkwY2Fj'
+```
+
+### Request (GET)
+
     /api/trackedEntityInstances.json?program=QqodHvGgDrq&fields=created,lastUpdated,trackedEntityInstance,attributes[attribute,value],enrollments[program,followup,status]&ou=IU2HDuYpTnY&attribute=GdwLfGObIRT,taFkwTiKFyR,xu1Ukzi0PMJ,fk5drl1hTvc,YlOp8W4FYRH,mHwPpgxFDge&programStatus=ACTIVE&order=lastUpdated:DESC&page=1&pageSize=20&programStartDate=2021-06-26
 
-#### Response
+### Response
+
 ```
 {
     "trackedEntityInstances": [
@@ -412,11 +481,58 @@ since it using same tracketd entity instance, we can also get close contact data
 ```
 ## Save Confirmed Case Data
 
+### CURL
+
+```
+curl --location --request POST 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances?strategy=CREATE_AND_UPDATE' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: BIGipServerpool_silacakprod_training_http=3945834688.47873.0000; SESSION=YjlmNjdhOTEtZmE3Ny00NTcxLWExYzYtMTU1OWQ2ODkwY2Fj' \
+--data-raw '{
+  "orgUnit": "ISI_DENGAN_Org Unit Id_DIAMBIL DARI LIST PUSKESMAS TERPILIH",
+  "trackedEntityType": "bHRcIH36xIk",
+  "attributes": [
+    { "attribute": "mHwPpgxFDge", "value": "ISI_DENGAN_NIK" },
+    { "attribute": "GdwLfGObIRT", "value": "ISI_DENGAN_Nama" },
+    { "attribute": "taFkwTiKFyR", "value": "ISI_DENGAN_Jenis Kelamin" },
+    { "attribute": "xu1Ukzi0PMJ", "value": "ISI_DENGAN_Tanggal Lahir" },
+    { "attribute": "fk5drl1hTvc", "value": "ISI_DENGAN_Usia" },
+    { "attribute": "quJD4An7Kmi", "value": "ISI_DENGAN_Alamat KTP" },
+    { "attribute": "e25qAod3KTg", "value": "ISI_DENGAN_Alamat Domisili" },
+    { "attribute": "YlOp8W4FYRH", "value": "ISI_DENGAN_No Telp"  }
+  ],
+  "enrollments": [
+    {
+      "enrollmentdate": "YYYY-MM-DD",
+      "incidentDate": "YYYY-MM-DD",
+      "orgUnit": "",
+      "orgUnitName": "",
+      "program": "gZrezya1BvN",
+      "events": [
+        {
+          "orgUnit": "",
+          "program": "gZrezya1BvN",
+          "programStage": "f4fobgMaOCr",
+          "eventDate": "YYYY-MM-DD",
+          "dataValues": [
+            {
+              "dataElement": "A9htpJFLuIr",
+              "value": "Kasus Konfirmasi"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}'
+```
+
 ### Request ( Post )
 
     /dev/trackedEntityInstances?strategy=CREATE_AND_UPDATE
 
 ### Example Request Body
+
 ```
 {
   orgUnit": ISI_DENGAN_Org Unit Id_DIAMBIL DARI LIST PUSKESMAS TERPILIH,
@@ -456,11 +572,21 @@ since it using same tracketd entity instance, we can also get close contact data
   ],
 };
 ```
+
 ## Lookup Program ID based on code,name,id
+
+### CURL
+
+```
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/programs.json?paging=false&query=Covid-19 Kasus&fields=id,name,code' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+--header 'Cookie: BIGipServerpool_silacakprod_training_http=3945834688.47873.0000; SESSION=YmQ5NDY1MTAtN2YxZi00ZDI4LTgyODEtYzVjNzFiYTY3N2Y3'
+```
 
 ### Request ( GET )
 
     /api/programs.json?paging=false&query=Covid-19 Kasus&fields=id,name,code
+
 ### Example Response
 
 ```
