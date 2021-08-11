@@ -60,3 +60,7 @@ See our contribution guidelines in these languages:
 - [Indonesian](CONTRIBUTING_ID.md)
 
 When contributing to our project, please use English when communicating with other people in issues and/or pull requests. [Click here](CONTRIBUTING.md#why-are-we-using-english-in-our-issues--prs) to read why. ([Bahasa Indonesia](CONTRIBUTING_ID.md#mengapa-kita-menggunakan-bahasa-inggris-dalam-menulis-issue-dan-pull-request))
+
+## API
+
+Our API documentation is in [api-refrence.md](docs/api-reference.md) file.
