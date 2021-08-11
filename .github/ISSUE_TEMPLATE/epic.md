@@ -3,6 +3,7 @@ name: Epic
 about: A master issue thread which contains other smaller issues.
 title: ""
 labels: epic
+assignees: zainfathoni
 ---
 
 ## Overview
