@@ -1,6 +1,6 @@
-## Silacak Api Docs
+# Silacak API Docs
 
- Base URL : `https://silacak.kemkes.go.id`
+**Base URL:** `https://silacak.kemkes.go.id`
 
 ## Login
 
@@ -11,6 +11,7 @@ Authorization: Basic base64encode(username:password)
 This endpoint will return "pong" if user successfully logged
 
 ### CURL
+
 ```
 curl --location --request GET 'https://training-silacak.kemkes.go.id/api/system/ping' \
 --header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
@@ -25,21 +26,21 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/system/
 
 ### Field
 
-|Name|Description|
-|--|--|
-|displayName| organization name
-|parent| parent data
-|id| id of organization
-|level| level organization
+| Name        | Description        |
+| ----------- | ------------------ |
+| displayName | organization name  |
+| parent      | parent data        |
+| id          | id of organization |
+| level       | level organization |
 
 ### Parameter
 
-|Name| Type  | Description|
-|--|--|--|
-|Paging|boolean| enable / disabled pagination
-|Fields|string| select one or more field
-|Pagesize|number| total item for each page
-|Page|number| request page
+| Name     | Type    | Description                  |
+| -------- | ------- | ---------------------------- |
+| Paging   | boolean | enable / disabled pagination |
+| Fields   | string  | select one or more field     |
+| Pagesize | number  | total item for each page     |
+| Page     | number  | request page                 |
 
 ### CURL
 
@@ -51,7 +52,6 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/organis
 ### Example HTTP Request ( GET )
 
     /api/organisationUnits?paging=true&fields=displayName,parent,id,level&pageSize=10
-
 
 ### Example HTTP Response
 
@@ -87,28 +87,28 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/organis
 
 ### Field
 
-|Name|Description|
-|--|--|
-|children| Puskesmas Detail
-|displayName| City / Distric name
+| Name        | Description         |
+| ----------- | ------------------- |
+| children    | Puskesmas Detail    |
+| displayName | City / Distric name |
 
 ### Children Field
 
-|Name|Description|
-|--|--|
-|displayName| Puskesmas Name
-|parent| parent detail
-|id| id puskesmas
-|path| -
+| Name        | Description    |
+| ----------- | -------------- |
+| displayName | Puskesmas Name |
+| parent      | parent detail  |
+| id          | id puskesmas   |
+| path        | -              |
 
 ### Parameter
 
-|Name| Type  | Description|
-|--|--|--|
-|filter|string| you can filter one of posible field, example : name:like:JAKARTA%20SELATAN
-|Fields|string| select one or more field to return possible value
-|Pagesize|number| total item for each page
-|Page|number| request page
+| Name     | Type   | Description                                                                |
+| -------- | ------ | -------------------------------------------------------------------------- |
+| filter   | string | you can filter one of posible field, example : name:like:JAKARTA%20SELATAN |
+| Fields   | string | select one or more field to return possible value                          |
+| Pagesize | number | total item for each page                                                   |
+| Page     | number | request page                                                               |
 
 ### CURL
 
@@ -149,25 +149,26 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/organis
             }
 
 ```
+
 ## User List at Puskesmas ( Filter by Puskesmas Name )
 
 ### Field
 
-|Name|Description|
-|--|--|
-|id| Puskesmas Id
-|name| Puskesmas Name
-|displayName| Puskesmas Display Name
-|userCredentials| User Credential Detail
+| Name            | Description            |
+| --------------- | ---------------------- |
+| id              | Puskesmas Id           |
+| name            | Puskesmas Name         |
+| displayName     | Puskesmas Display Name |
+| userCredentials | User Credential Detail |
 
 ### Parameter
 
-|Name| Type  | Description|
-|--|--|--|
-|ou":like":< puskesmas name>|string| filter by puskesmas name
-|Fields|string| select one or more field to return possible value
-|Pagesize|number| total item for each page
-|Page|number| request page
+| Name                        | Type   | Description                                       |
+| --------------------------- | ------ | ------------------------------------------------- |
+| ou":like":< puskesmas name> | string | filter by puskesmas name                          |
+| Fields                      | string | select one or more field to return possible value |
+| Pagesize                    | number | total item for each page                          |
+| Page                        | number | request page                                      |
 
 ### CURL
 
@@ -249,33 +250,34 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/users.j
     ]
 }
 ```
+
 ## Detail User
 
 ### Field
 
-|Name|Description|
-|--|--|
-|lastUpdate| latest update date
-|id| user Id
-|created| Created date
-|birthday| Birthday date
-|displayName| User display name
-|jobTitle| User Job Title
-|surname| User surname
-|whatsApp| User Whatsapp number
-|lastCheckedInterpretations| User Last Checked Interpretation
-|firstname| User firstname
-|phoneNumber| User phone number
-|access| User access
-|userCredentials| User credentials
-|organisationUnits| User organization units
-|organisationUnits| User organization units
+| Name                       | Description                      |
+| -------------------------- | -------------------------------- |
+| lastUpdate                 | latest update date               |
+| id                         | user Id                          |
+| created                    | Created date                     |
+| birthday                   | Birthday date                    |
+| displayName                | User display name                |
+| jobTitle                   | User Job Title                   |
+| surname                    | User surname                     |
+| whatsApp                   | User Whatsapp number             |
+| lastCheckedInterpretations | User Last Checked Interpretation |
+| firstname                  | User firstname                   |
+| phoneNumber                | User phone number                |
+| access                     | User access                      |
+| userCredentials            | User credentials                 |
+| organisationUnits          | User organization units          |
+| organisationUnits          | User organization units          |
 
 ### Parameter
 
-|Name| Type  | Description|
-|--|--|--|
-|Fields|string| select one or more field to return possible value
+| Name   | Type   | Description                                       |
+| ------ | ------ | ------------------------------------------------- |
+| Fields | string | select one or more field to return possible value |
 
 ### CURL
 
@@ -364,27 +366,28 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/users/B
     "userGroups": []
 }
 ```
+
 ## List Confirmed Cases
 
 ### Field
 
-|Name|Description|
-|--|--|
-|latesUpdate| latest update date
-|created| created date
-|trackedEntityInstance| -
+| Name                  | Description        |
+| --------------------- | ------------------ |
+| latesUpdate           | latest update date |
+| created               | created date       |
+| trackedEntityInstance | -                  |
 
 ### Parameter
 
-|Name| Type  | Description|
-|--|--|--|
-|Program|string| program id
-|Fields|string| select one or more field to return possible value
-|ou|string| ou id
-|programStatus|string| Program status (ACTIVE, CANCELLED, OPEN, CLOSE)
-|programStartDate|string| program start date format yyyy-mm-dd
-|order|string| order by fields example : lasUpdated:DESC
-|programEndDate|string| program end date format yyyy-mm-dd
+| Name             | Type   | Description                                       |
+| ---------------- | ------ | ------------------------------------------------- |
+| Program          | string | program id                                        |
+| Fields           | string | select one or more field to return possible value |
+| ou               | string | ou id                                             |
+| programStatus    | string | Program status (ACTIVE, CANCELLED, OPEN, CLOSE)   |
+| programStartDate | string | program start date format yyyy-mm-dd              |
+| order            | string | order by fields example : lasUpdated:DESC         |
+| programEndDate   | string | program end date format yyyy-mm-dd                |
 
 ### CURL
 
@@ -396,6 +399,7 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/tracked
 ### Example Request ( GET )
 
     /api/trackedEntityInstances.json?program=gZrezya1BvN&fields=trackedEntityInstance,created,lastUpdated&pageSize=1000&ou=IU2HDuYpTnY&programStatus=ACTIVE&programStartDate=2021-01-01&order=lastUpdated:DESC&programEndDate=2021-07-31
+
 ### Example Response
 
 ```
@@ -410,7 +414,7 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/tracked
 }
 ```
 
-###  Request for get Close Contact Data List ( GET )
+### Request for get Close Contact Data List ( GET )
 
 since it using same tracketd entity instance, we can also get close contact data list, but with different params
 
@@ -479,6 +483,7 @@ curl --location -g --request GET 'https://training-silacak.kemkes.go.id/api/trac
     ]
 }
 ```
+
 ## Save Confirmed Case Data
 
 ### CURL
@@ -717,5 +722,3 @@ curl 'https://training-silacak.kemkes.go.id/api/users?fields=displayName%2Cid%2C
     ]
 }
 ```
-
-
