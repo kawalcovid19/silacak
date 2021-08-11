@@ -651,3 +651,26 @@ curl 'https://training-silacak.kemkes.go.id/api/events?strategy=CREATE_AND_UPDAT
   --data-raw '{"program":"QqodHvGgDrq","trackedEntityInstance":"ZnSok4EkSwS","orgUnit":"xtpPPC95Tjl","eventDate":"2021-07-30","programStage":"HMGxPVY6gbi","status":"COMPLETED","storedBy":"admin-nik","event":null,"dataValues":[{"dataElement":"cL5fWOyf8AW","value":"Karantina mandiri dirumah"},{"dataElement":"uMVVgATDD88","value":"Bergejala (jadi suspek)"},{"dataElement":"I7QCcAQA3XG","value":"admin-nik"},{"dataElement":"aAxFXF8Gji5","value":"2021-08-10"},{"dataElement":"bdRVchsLoMA","value":"Tidak"},{"dataElement":"VoF0wVIsXmN","value":"Tidak"},{"dataElement":"IbfyBeB9F9s","value":"Tidak"},{"dataElement":"qoTWgXxRuUh","value":"Tidak"},{"dataElement":"mEyQpbkLcBD","value":"Tidak"},{"dataElement":"a6aHeeKEneO","value":"Tidak"},{"dataElement":"Xuc9yJiWQLv","value":"Tidak"},{"dataElement":"dLHoaciHZil","value":"Tidak"},{"dataElement":"PYYYkziHZRg","value":"Tidak"},{"dataElement":"x1r6FwoxUtf","value":"Tidak"},{"dataElement":"xjakRmQzW3J","value":"Tidak"},{"dataElement":"uCRZ9oyov85","value":"Tidak"},{"dataElement":"CbH5mct7les","value":"Tidak"},{"dataElement":"XfcxPehRoHB"},{"dataElement":"sqMSOTAWOWa","value":1}]}' \
   --compressed
 ```
+
+## Check Account Status
+
+### Curl
+
+```
+curl 'https://silacak.kemkes.go.id/api/users?fields=displayName%2Cid%2Caccess%2CuserCredentials%5Busername%2Cdisabled%2ClastLogin%2CtwoFA%5D%2CteiSearchOrganisationUnits%5Bid%2Cpath%5D&filter=userCredentials.username:eq:<username>&fields=id' \
+  -H 'authority: silacak.kemkes.go.id' \
+  -H 'pragma: no-cache' \
+  -H 'cache-control: no-cache' \
+  -H 'sec-ch-ua: "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"' \
+  -H 'accept: application/json, text/plain, */*' \
+  -H 'authorization: Basic YWRtaW4tcmVnaXN0ZXI6S2Vta2VzMjAyMSUl' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36' \
+  -H 'origin: https://reg-silacak.kemkes.go.id' \
+  -H 'sec-fetch-site: same-site' \
+  -H 'sec-fetch-mode: cors' \
+  -H 'sec-fetch-dest: empty' \
+  -H 'referer: https://reg-silacak.kemkes.go.id/' \
+  -H 'accept-language: en-US,en;q=0.9' \
+  --compressed
+```
