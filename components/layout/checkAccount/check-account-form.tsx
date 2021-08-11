@@ -47,7 +47,12 @@ export function CheckAccountForm({ onSubmit }: LoginFormProps) {
           </p>
         </div>
         <button
-          className="flex items-center justify-center w-full px-4 py-2 border border-transparent text-center text-base rounded-md shadow-sm text-white bg-silacak-600 hover:bg-silacak-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-silacak-500"
+          className="flex items-center justify-center w-full
+          px-4 py-2 border border-transparent
+          text-center text-base rounded-md shadow-sm
+          text-white bg-silacak-600 hover:bg-silacak-700
+          focus:outline-none focus:ring-2 focus:ring-offset-2
+          focus:ring-silacak-500"
           type="submit"
         >
           Cek Status Pendaftaran
