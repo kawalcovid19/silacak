@@ -657,7 +657,7 @@ curl 'https://training-silacak.kemkes.go.id/api/events?strategy=CREATE_AND_UPDAT
 ### Curl
 
 ```
-curl 'https://silacak.kemkes.go.id/api/users?fields=displayName%2Cid%2Caccess%2CuserCredentials%5Busername%2Cdisabled%2ClastLogin%2CtwoFA%5D%2CteiSearchOrganisationUnits%5Bid%2Cpath%5D&filter=userCredentials.username:eq:<username>&fields=id' \
+curl 'https://training-silacak.kemkes.go.id/api/users?fields=displayName%2Cid%2Caccess%2CuserCredentials%5Busername%2Cdisabled%2ClastLogin%2CtwoFA%5D%2CteiSearchOrganisationUnits%5Bid%2Cpath%5D&filter=userCredentials.username:eq:<username>&fields=id' \
   -H 'authority: silacak.kemkes.go.id' \
   -H 'pragma: no-cache' \
   -H 'cache-control: no-cache' \
@@ -674,3 +674,48 @@ curl 'https://silacak.kemkes.go.id/api/users?fields=displayName%2Cid%2Caccess%2C
   -H 'accept-language: en-US,en;q=0.9' \
   --compressed
 ```
+
+### Example Response
+
+```
+{
+    "pager": {
+        "page": 1,
+        "pageCount": 1,
+        "total": 1,
+        "pageSize": 50
+    },
+    "users": [
+        {
+            "id": "BJmAkJrz62L",
+            "displayName": "Latihan Puskesmas",
+            "access": {
+                "read": true,
+                "update": true,
+                "externalize": true,
+                "delete": true,
+                "write": true,
+                "manage": true
+            },
+            "userCredentials": {
+                "lastLogin": "2021-08-11T16:59:37.104",
+                "disabled": false,
+                "twoFA": false,
+                "username": "latihan"
+            },
+            "teiSearchOrganisationUnits": [
+                {
+                    "id": "IU2HDuYpTnY",
+                    "path": "/AWDfATa8TT1/oF6ONQfGuDe/mvSKjNDpixY/tbCAVLlmXcJ/IU2HDuYpTnY"
+                },
+                {
+                    "id": "xlIBXTubNkG",
+                    "path": "/AWDfATa8TT1/oF6ONQfGuDe/mvSKjNDpixY/tbCAVLlmXcJ/xlIBXTubNkG"
+                }
+            ]
+        }
+    ]
+}
+```
+
+
