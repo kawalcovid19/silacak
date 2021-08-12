@@ -10,8 +10,8 @@ export default function RegistrationStatus() {
         <Container className="w-full max-w-prose mx-auto">
           <div className="bg-white sm:shadow-md rounded-lg px-4 py-8 sm:px-16 sm:py-8 max-w-lg m-auto">
             <div className="space-y-10 ">
-              <h1 className="text-xl text-silacak-600 text-center">
-                CEK STATUS PENDAFTARAN TRACER
+              <h1 className="text-xl text-silacak-600 text-center uppercase">
+                Cek Status Pendaftaran Tracer
               </h1>
               <CheckAccountForm />
             </div>
