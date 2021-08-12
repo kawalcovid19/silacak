@@ -15,7 +15,7 @@ const userNavigation = [
   { name: "Sign out", href: "#" },
 ];
 
-export function DashboardHeader() {
+export function DashboardNav() {
   const setSidebarOpen = useDashboardStore(state => state.setSidebarOpen);
 
   return (

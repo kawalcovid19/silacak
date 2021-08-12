@@ -1,28 +1,14 @@
 import { Dialog, Transition } from "@headlessui/react";
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  UsersIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { XIcon } from "@heroicons/react/outline";
 import clsx from "clsx";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { useDashboardStore } from "~/lib/layout/dashboard/dashboard-store";
-
-const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: InboxIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
-];
+import { sidebarMenu } from "~/lib/layout/dashboard/sidebar-data";
 
 export function DashboardSidebar() {
+  const router = useRouter();
   const { sidebarOpen, setSidebarOpen } = useDashboardStore(state => state);
 
   return (
@@ -81,29 +67,33 @@ export function DashboardSidebar() {
               </div>
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2 space-y-1">
-                  {navigation.map(item => (
-                    <a
-                      key={item.name}
-                      className={clsx(
-                        item.current
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                      )}
-                      href={item.href}
-                    >
-                      <item.icon
-                        aria-hidden="true"
+                  {sidebarMenu.map(item => {
+                    const isActive = item.exact
+                      ? item.href === router.asPath
+                      : router.asPath.startsWith(item.href);
+
+                    return (
+                      <a
+                        key={item.name}
                         className={clsx(
-                          item.current
-                            ? "text-gray-300"
-                            : "text-gray-400 group-hover:text-gray-300",
-                          "mr-4 flex-shrink-0 h-6 w-6"
+                          isActive
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                         )}
-                      />
-                      {item.name}
-                    </a>
-                  ))}
+                        href={item.href}
+                      >
+                        <item.icon
+                          aria-hidden="true"
+                          className={clsx(
+                            isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300",
+                            "mr-4 flex-shrink-0 h-6 w-6"
+                          )}
+                        />
+                        {item.name}
+                      </a>
+                    );
+                  })}
                 </nav>
               </div>
             </div>
@@ -130,27 +120,33 @@ export function DashboardSidebar() {
             </div>
             <div className="flex-1 flex flex-col overflow-y-auto">
               <nav className="flex-1 px-2 py-4 bg-gray-800 space-y-1">
-                {navigation.map(item => (
-                  <a
-                    key={item.name}
-                    className={clsx(
-                      item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                      "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-                    )}
-                    href={item.href}
-                  >
-                    <item.icon
-                      aria-hidden="true"
+                {sidebarMenu.map(item => {
+                  const isActive = item.exact
+                    ? item.href === router.asPath
+                    : router.asPath.startsWith(item.href);
+
+                  return (
+                    <a
+                      key={item.name}
                       className={clsx(
-                        item.current ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300",
-                        "mr-3 flex-shrink-0 h-6 w-6"
+                        isActive
+                          ? "bg-gray-900 text-white"
+                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                       )}
-                    />
-                    {item.name}
-                  </a>
-                ))}
+                      href={item.href}
+                    >
+                      <item.icon
+                        aria-hidden="true"
+                        className={clsx(
+                          isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300",
+                          "mr-3 flex-shrink-0 h-6 w-6"
+                        )}
+                      />
+                      {item.name}
+                    </a>
+                  );
+                })}
               </nav>
             </div>
           </div>
