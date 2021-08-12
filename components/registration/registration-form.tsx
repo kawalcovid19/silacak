@@ -136,13 +136,6 @@ export function RegistrationForm() {
           </div>
         </div>
         <div className="mt-1 relative rounded-md shadow-sm">
-          {/* <input
-            type="text"
-            name="price"
-            id="price"
-            className="focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md"
-            placeholder="0.00"
-          /> */}
           <InputText placeholder="Masukkan Kata Sandi" type="password" />
 
           <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
