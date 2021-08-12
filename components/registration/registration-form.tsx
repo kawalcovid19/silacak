@@ -33,8 +33,8 @@ export function RegistrationForm() {
       </div>
       <div className="space-y-2">
         <FormLabel>Provinsi</FormLabel>
-        <InputSelect title="Urut berdasarkan">
-          <option disabled hidden selected value="">
+        <InputSelect defaultValue="" title="Urut berdasarkan">
+          <option disabled hidden value="">
             -Masukkan Provinsi-
           </option>
           <option>A</option>
@@ -44,8 +44,8 @@ export function RegistrationForm() {
       </div>
       <div className="space-y-2">
         <FormLabel>Kabupaten</FormLabel>
-        <InputSelect title="Urut berdasarkan">
-          <option disabled hidden selected value="">
+        <InputSelect defaultValue="" title="Urut berdasarkan">
+          <option disabled hidden value="">
             -Masukkan Kabupaten-
           </option>
           <option>A</option>
@@ -55,8 +55,8 @@ export function RegistrationForm() {
       </div>
       <div className="space-y-2">
         <FormLabel>Kecamatan</FormLabel>
-        <InputSelect title="Urut berdasarkan">
-          <option disabled hidden selected value="">
+        <InputSelect defaultValue="" title="Urut berdasarkan">
+          <option disabled hidden value="">
             -Masukkan Kecamatan-
           </option>
           <option>A</option>
@@ -66,8 +66,8 @@ export function RegistrationForm() {
       </div>
       <div className="space-y-2">
         <FormLabel>PKM</FormLabel>
-        <InputSelect title="Urut berdasarkan">
-          <option disabled hidden selected value="">
+        <InputSelect defaultValue="" title="Urut berdasarkan">
+          <option disabled hidden value="">
             -Masukkan PKM-
           </option>
           <option>A</option>
