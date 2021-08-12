@@ -9,9 +9,9 @@ export function RegistrationInfoMessage() {
           Hubungi Help Desk
         </a>
       </div>
-      <i>
-        Jam Operasional Helpdesk <b>08:00 - 17:00</b> WIB
-      </i>
+      <em>
+        Jam Operasional Helpdesk <strong>08:00 - 17:00</strong> WIB
+      </em>
     </div>
   );
 }

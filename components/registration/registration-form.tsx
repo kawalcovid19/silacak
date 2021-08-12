@@ -147,21 +147,8 @@ export function RegistrationForm() {
 
           <div className="absolute inset-y-0 right-0 pr-4 flex items-center">
             <EyeIcon className="w-5 h-5 text-silacak-500" />
-            {/* <label htmlFor="currency" className="sr-only">
-              Currency
-            </label>
-            <select
-              id="currency"
-              name="currency"
-              className="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 sm:text-sm rounded-md"
-            >
-              <option>USD</option>
-              <option>CAD</option>
-              <option>EUR</option>
-            </select> */}
           </div>
         </div>
-        {/* <InputText placeholder="Masukkan Kata Sandi" type="password" /> */}
         <div className="mt-2">
           <span className="text-gray-500 ">* Tidak Boleh ada spasi minimal 5 karakter</span>
         </div>
@@ -170,8 +157,8 @@ export function RegistrationForm() {
         <div className="mb-3">
           Tekan tombol <b>Daftar</b> untuk melanjutkan proses pendaftaran.
         </div>
-        <Button block={true} className="w-full">
-          DAFTAR
+        <Button block={true} className="w-full uppercase">
+          Daftar
         </Button>
       </div>
     </div>
