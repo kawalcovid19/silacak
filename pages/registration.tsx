@@ -8,7 +8,7 @@ import { RegistrationInfoMessage } from "~/components/registration/registration-
 import { RegistrationForm } from "~/components/registration/registration-form";
 import { HomePageContent } from "~/components/layout/home/home-content";
 
-export default function Home() {
+export default function RegistrationPage() {
   return (
     <LayoutRoot>
       <Head>
@@ -20,11 +20,13 @@ export default function Home() {
         <link href="/favicon.ico" rel="icon" />
       </Head>
       <HomePageContent className="bg-gray-100">
-        <ContentBoard className="p-8 my-6 lg:my-12">
-          <ContentBoardTitle>Pendaftaran Tracer</ContentBoardTitle>
-          <ContentBoardSubtitle>
-            Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda
-          </ContentBoardSubtitle>
+        <ContentBoard className="p-8 my-6 lg:my-12 space-y-6">
+          <div className="space-y-3">
+            <ContentBoardTitle>Pendaftaran Tracer</ContentBoardTitle>
+            <ContentBoardSubtitle>
+              Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda
+            </ContentBoardSubtitle>
+          </div>
           <RegistrationForm />
           <RegistrationInfoMessage />
         </ContentBoard>

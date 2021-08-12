@@ -11,7 +11,7 @@ export type ContentBoardSubtitleProps = React.ComponentPropsWithoutRef<"h2">;
 export const ContentBoardSubtitle = React.forwardRef<HTMLHeadingElement, ContentBoardSubtitleProps>(
   ({ children, className, ...rest }, ref) => {
     return (
-      <h2 className={clsx("text-center my-3 text-gray-700", className)} ref={ref} {...rest}>
+      <h2 className={clsx("text-center text-gray-700", className)} ref={ref} {...rest}>
         {children}
       </h2>
     );
