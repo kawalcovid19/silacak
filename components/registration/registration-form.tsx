@@ -21,11 +21,11 @@ export function RegistrationForm() {
           <span>Nomor Whatsapp yang aktif</span>
         </div>
         <FormGroup>
-          <span className="bg-gray-200 px-4 flex items-center rounded-l-md border-2 border-gray-00">
+          <span className="inline-flex items-center px-3 first:rounded-l-md last:rounded-r-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
             +62
           </span>
           <InputText
-            className="block w-full sm:text-sm rounded-md"
+            className="block w-full sm:text-sm"
             isGroupItem
             placeholder="838xxxxxxx"
             type="text"

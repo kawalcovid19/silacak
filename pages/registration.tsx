@@ -1,11 +1,12 @@
 import Head from "next/head";
 import { LayoutRoot } from "~/components/layout/home";
-import { ContentBoard } from "~/components/ui/board/content-board/content-board";
-import { FormTitle } from "~/components/ui/forms/form-title";
-import { FormSubtitle } from "~/components/ui/forms/form-subtitle";
+import { ContentBoard } from "~/components/ui/board/content-board";
+import { ContentBoardTitle } from "~/components/ui/board/content-board-title";
+import { ContentBoardSubtitle } from "~/components/ui/board/content-board-subtitle";
 
 import { RegistrationInfoMessage } from "~/components/registration/registration-info-message";
 import { RegistrationForm } from "~/components/registration/registration-form";
+import { HomePageContent } from "~/components/layout/home/home-content";
 
 export default function Home() {
   return (
@@ -18,12 +19,16 @@ export default function Home() {
         />
         <link href="/favicon.ico" rel="icon" />
       </Head>
-      <ContentBoard className="p-8 my-4 w-">
-        <FormTitle>Pendaftaran Tracer</FormTitle>
-        <FormSubtitle>Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda</FormSubtitle>
-        <RegistrationForm />
-        <RegistrationInfoMessage />
-      </ContentBoard>
+      <HomePageContent className="bg-gray-100">
+        <ContentBoard className="p-8 my-6 lg:my-12">
+          <ContentBoardTitle>Pendaftaran Tracer</ContentBoardTitle>
+          <ContentBoardSubtitle>
+            Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda
+          </ContentBoardSubtitle>
+          <RegistrationForm />
+          <RegistrationInfoMessage />
+        </ContentBoard>
+      </HomePageContent>
     </LayoutRoot>
   );
 }
