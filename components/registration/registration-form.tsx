@@ -112,7 +112,7 @@ export function RegistrationForm() {
               <InformationCircleIcon className="w-5 h-5" />
             </div>
             <div>
-              <b>Nama ID</b> ini akan digunakan untuk login. Harap di ingat!
+              <strong>Nama ID</strong> ini akan digunakan untuk login. Harap di ingat!
             </div>
           </div>
         </div>
@@ -131,7 +131,7 @@ export function RegistrationForm() {
               <InformationCircleIcon className="w-5 h-5" />
             </div>
             <div>
-              <b>Kata Sandi </b> ini akan digunakan untuk login. Harap di ingat!
+              <strong>Kata Sandi</strong> ini akan digunakan untuk login. Harap di ingat!
             </div>
           </div>
         </div>
@@ -148,7 +148,7 @@ export function RegistrationForm() {
       </div>
       <div className="mb-7">
         <div className="mb-3">
-          Tekan tombol <b>Daftar</b> untuk melanjutkan proses pendaftaran.
+          Tekan tombol <strong>Daftar</strong> untuk melanjutkan proses pendaftaran.
         </div>
         <Button block={true} className="w-full uppercase">
           Daftar
