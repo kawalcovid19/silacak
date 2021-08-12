@@ -11,7 +11,7 @@ export const DashboardMain = forwardRef<HTMLElement, DashboardMainProps>(
         ref={ref}
         {...rest}
       >
-        <div className="py-6">{children}</div>
+        <div>{children}</div>
       </main>
     );
   }
