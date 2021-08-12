@@ -52,6 +52,7 @@ module.exports = {
       {
         source: "/dashboard",
         destination: "/dashboard/tracing",
+        permanent: false,
       },
     ];
   },
