@@ -12,5 +12,8 @@ describe("RegistrationPage", () => {
 
     const subtitle = screen.getByText(/Isi dengan lengkap dan ingat Nama ID dan Kata Sandi Anda/i);
     expect(subtitle).toBeVisible();
+
+    const registerButton = screen.getByRole("button", { name: /daftar/i });
+    expect(registerButton).toBeVisible();
   });
 });
