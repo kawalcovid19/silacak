@@ -21,7 +21,7 @@ export const homepageNavbarItems: NavbarItem[] = [
   },
   {
     name: "Registrasi",
-    href: "/register",
+    href: "/registration",
     exact: true,
   },
   {
