@@ -25,7 +25,8 @@ export function RegistrationForm() {
             +62
           </span>
           <InputText
-            className="rounded-l-none block w-full sm:text-sm rounded-md"
+            className="block w-full sm:text-sm rounded-md"
+            isGroupItem
             placeholder="838xxxxxxx"
             type="text"
           />
