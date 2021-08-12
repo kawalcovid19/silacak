@@ -8,7 +8,7 @@ export const DashboardRoot = forwardRef<HTMLDivElement, DashboardRootProps>(
   ({ children, className, ...rest }, ref) => {
     return (
       <div
-        className={clsx("flex flex-col w-full min-h-screen bg-white", className)}
+        className={clsx("h-screen flex overflow-hidden bg-gray-100", className)}
         ref={ref}
         {...rest}
       >
