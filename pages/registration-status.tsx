@@ -1,4 +1,4 @@
-import { CheckAccountForm } from "~/components/layout/checkAccount/check-account-form";
+import { CheckAccountForm } from "~/components/check-account";
 import { LayoutRoot } from "~/components/layout/home";
 import { HomePageContent } from "~/components/layout/home/home-content";
 import { Container } from "~/components/ui/container";
