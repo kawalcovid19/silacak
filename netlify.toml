@@ -16,5 +16,5 @@
 
 [[redirects]]
   from = "/dashboard"
-  to = "/dashboard-tracing"
+  to = "/dashboard/tracing"
   status = 302
