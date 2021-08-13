@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/outline";
 import clsx from "clsx";
 import Image from "next/image";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment } from "react";
 import { useDashboardStore } from "~/lib/layout/dashboard/dashboard-store";
@@ -73,25 +74,27 @@ export function DashboardSidebar() {
                       : router.asPath.startsWith(item.href);
 
                     return (
-                      <a
-                        key={item.name}
-                        className={clsx(
-                          isActive
-                            ? "bg-gray-900 text-white"
-                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                          "group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                        )}
-                        href={item.href}
-                      >
-                        <item.icon
-                          aria-hidden="true"
+                      <Link key={item.name} href={item.href}>
+                        <a
                           className={clsx(
-                            isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300",
-                            "mr-4 flex-shrink-0 h-6 w-6"
+                            isActive
+                              ? "bg-gray-900 text-white"
+                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                            "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                           )}
-                        />
-                        {item.name}
-                      </a>
+                        >
+                          <item.icon
+                            aria-hidden="true"
+                            className={clsx(
+                              isActive
+                                ? "text-gray-300"
+                                : "text-gray-400 group-hover:text-gray-300",
+                              "mr-4 flex-shrink-0 h-6 w-6"
+                            )}
+                          />
+                          {item.name}
+                        </a>
+                      </Link>
                     );
                   })}
                 </nav>
@@ -126,25 +129,25 @@ export function DashboardSidebar() {
                     : router.asPath.startsWith(item.href);
 
                   return (
-                    <a
-                      key={item.name}
-                      className={clsx(
-                        isActive
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                        "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
-                      )}
-                      href={item.href}
-                    >
-                      <item.icon
-                        aria-hidden="true"
+                    <Link key={item.name} href={item.href}>
+                      <a
                         className={clsx(
-                          isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300",
-                          "mr-3 flex-shrink-0 h-6 w-6"
+                          isActive
+                            ? "bg-gray-900 text-white"
+                            : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                          "group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                         )}
-                      />
-                      {item.name}
-                    </a>
+                      >
+                        <item.icon
+                          aria-hidden="true"
+                          className={clsx(
+                            isActive ? "text-gray-300" : "text-gray-400 group-hover:text-gray-300",
+                            "mr-3 flex-shrink-0 h-6 w-6"
+                          )}
+                        />
+                        {item.name}
+                      </a>
+                    </Link>
                   );
                 })}
               </nav>
