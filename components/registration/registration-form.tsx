@@ -7,6 +7,7 @@ import {
   InputCheckboxCustom,
   InputText,
   InputSelect,
+  InputHelpText,
 } from "~/components/ui/forms";
 import { PrimaryButton as Button } from "~/components/ui/button";
 
@@ -101,8 +102,10 @@ export function RegistrationForm() {
             </span>
           </div>
         </div>
-        <InputText placeholder="Masukkan Nama ID" />
-        <span className="block text-gray-500">* Tidak Boleh ada spasi minimal 5 karakter</span>
+        <InputText aria-describedby="username-description" placeholder="Masukkan Nama ID" />
+        <InputHelpText id="username-description">
+          Tidak boleh ada spasi, maksimal 5 karakter.
+        </InputHelpText>
       </div>
       <div className="space-y-2">
         <FormLabel>Kata Sandi / Password</FormLabel>
@@ -117,7 +120,12 @@ export function RegistrationForm() {
           </div>
         </div>
         <div className="relative rounded-md shadow-sm">
-          <InputText hasTrailingIcon placeholder="Masukkan Kata Sandi" type="password" />
+          <InputText
+            aria-describedby="password-description"
+            hasTrailingIcon
+            placeholder="Masukkan Kata Sandi"
+            type="password"
+          />
           <div className="absolute inset-y-0 right-0 flex items-center">
             <button
               className="focus:ring-silacak-500 focus:border-silacak-500 h-full py-0 pl-2 pr-3 border-transparent bg-transparent text-gray-500 sm:text-sm rounded-md"
@@ -128,13 +136,15 @@ export function RegistrationForm() {
             </button>
           </div>
         </div>
-        <span className="block text-gray-500">* Tidak Boleh ada spasi minimal 5 karakter</span>
+        <InputHelpText id="password-description">
+          Tidak boleh ada spasi, maksimal 5 karakter.
+        </InputHelpText>
       </div>
       <div className="space-y-4">
         <p>
           Tekan tombol <strong>Daftar</strong> untuk melanjutkan proses pendaftaran.
         </p>
-        <Button block={true} className="w-full uppercase">
+        <Button block className="w-full uppercase">
           Daftar
         </Button>
       </div>
