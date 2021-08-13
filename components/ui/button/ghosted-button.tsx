@@ -8,16 +8,13 @@ import {
   buttonRoundedStyles,
   buttonSizes,
   disabledStyles,
-  primaryButtonColors,
   renderButtonIcon,
 } from "./utils";
 
 /**
- * Button component used for primary actions.
- *
- * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
+ * A ghosted button with no background when not hovered.
  */
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const GhostedButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
@@ -25,14 +22,13 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       type,
       block,
       size = "md",
-      color = "silacak",
       rounded,
       icon,
       iconPosition = "left",
+      children,
       isLoading,
       loadingText = "Memuat...",
       disabled,
-      children,
       ...rest
     },
     ref
@@ -42,8 +38,7 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         buttonBlockStyles(block, iconPosition),
         buttonSizes(size),
         buttonRoundedStyles(rounded, size),
-        "items-center justify-center border border-transparent font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2",
-        primaryButtonColors(color),
+        "items-center border border-transparent font-medium text-blue-700 hover:bg-blue-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
         disabledStyles,
         className
       )}
@@ -64,4 +59,4 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
+GhostedButton.displayName = "GhostedButton";
