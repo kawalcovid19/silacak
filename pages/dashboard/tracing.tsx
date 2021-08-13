@@ -10,7 +10,7 @@ export default function TracingDashboardIndex() {
         <div className="flex flex-col lg:flex-row lg:justify-between">
           <div className="space-y-2">
             <p className="text-sm">Anda terdaftar pada:</p>
-            <p className="text-lg font-semibold leading-[38px]">Nama Kecamatan, DKI JAKARTA</p>
+            <p className="text-lg font-semibold lg:text-xl">Nama Kecamatan, DKI JAKARTA</p>
           </div>
           <div className="flex-none w-full mt-4 space-y-2 lg:max-w-xs lg:mt-0 lg:ml-4">
             <FormLabel htmlFor="facility">Pilih PKM</FormLabel>
@@ -27,7 +27,17 @@ export default function TracingDashboardIndex() {
         </div>
       </ConfirmedCasesHeader>
       <DashboardPageContent>
-        <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" />
+        <div className="space-y-6">
+          <div className="space-y-1">
+            <p className="text-sm lg:text-md text-gray-600">Anda mengakses data</p>
+            <p className="text-xl lg:text-2xl text-gray-900 font-semibold">
+              9911032 - PUSKESMAS SUKA MAJU
+            </p>
+          </div>
+          {/* TODO: use tabs on both mobile + desktop */}
+          {/* TODO: use card UI on both mobile + desktop */}
+          <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" />
+        </div>
       </DashboardPageContent>
     </DashboardPage>
   );

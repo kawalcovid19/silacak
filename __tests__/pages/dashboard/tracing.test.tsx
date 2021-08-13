@@ -4,7 +4,7 @@ import TracingDashboardIndex from "~/pages/dashboard/tracing";
 jest.mock("next/router", () => require("next-router-mock"));
 
 describe("DashboardIndex", () => {
-  it("renders the correct page contents", () => {
+  it("renders the correct page header", () => {
     render(<TracingDashboardIndex />);
 
     const title = screen.getByText(/Anda terdaftar pada/i);
