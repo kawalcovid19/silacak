@@ -1,5 +1,6 @@
 # Temporary header config until Netlify supports setting `headers` on `next.config.js`
 # https://github.com/netlify/netlify-plugin-nextjs/issues/150
+
 [[headers]]
   for = "/*"
   [headers.values]
@@ -7,12 +8,13 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "same-origin"
+
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
 [[redirects]]
-  from = "/old-path"
-  to = "/new-path"
+  from = "/dashboard"
+  to = "/dashboard/tracing"
   status = 302
