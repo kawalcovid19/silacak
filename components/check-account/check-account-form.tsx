@@ -1,30 +1,22 @@
-import { useState, FormEvent } from "react";
+import { SubmitHandler, useForm } from "react-hook-form";
+
 import { CheckAccountBanner } from "./check-account-banner";
 import { FormLabel, InputText } from "~/components/ui/forms";
 
-export interface LoginFormValues {
+export interface CheckAccountValues {
   userId: string;
 }
 
 export interface LoginFormProps {
-  initialProps?: LoginFormValues;
-  onSubmit?: (values: LoginFormValues) => void;
+  onSubmit: SubmitHandler<CheckAccountValues>;
 }
 
 export function CheckAccountForm({ onSubmit }: LoginFormProps) {
-  const [userId, setUserId] = useState("");
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (onSubmit) {
-      onSubmit({ userId });
-    }
-  };
+  const { handleSubmit, register } = useForm();
 
   return (
     <>
-      <form action="#" className="space-y-4" method="POST" onSubmit={handleSubmit}>
+      <form action="#" className="space-y-4" method="POST" onSubmit={handleSubmit(onSubmit)}>
         <div>
           <FormLabel className="block text-sm font-medium text-gray-700" htmlFor="username">
             Nama ID yang didaftarkan
@@ -33,12 +25,10 @@ export function CheckAccountForm({ onSubmit }: LoginFormProps) {
             <InputText
               autoComplete="off"
               id="username"
-              name="username"
-              onChange={e => setUserId(e.target.value)}
               placeholder="Masukkan nama ID anda"
               required
               type="text"
-              value={userId}
+              {...register("username")}
             />
           </div>
         </div>
