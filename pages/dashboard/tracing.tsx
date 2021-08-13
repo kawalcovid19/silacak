@@ -13,9 +13,9 @@ export default function TracingDashboardIndex() {
             <p className="text-lg font-semibold leading-[38px]">Nama Kecamatan, DKI JAKARTA</p>
           </div>
           <div className="flex-none w-full mt-4 space-y-2 lg:max-w-xs lg:mt-0 lg:ml-4">
-            <FormLabel>Pilih PKM</FormLabel>
+            <FormLabel htmlFor="facility">Pilih PKM</FormLabel>
             <div className="flex items-end space-x-4">
-              <InputSelect defaultValue="">
+              <InputSelect defaultValue="" id="facility" name="facility">
                 <option value="">- Pilih PKM -</option>
                 <option>A</option>
                 <option>B</option>
