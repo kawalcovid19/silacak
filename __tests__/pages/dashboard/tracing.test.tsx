@@ -7,7 +7,7 @@ describe("DashboardIndex", () => {
   it("renders without crashing", () => {
     render(<TracingDashboardIndex />);
 
-    const title = screen.getByText(/Dashboard/i);
+    const title = screen.getByText(/Anda terdaftar pada/i);
     expect(title).toBeVisible();
   });
 });
