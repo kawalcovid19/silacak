@@ -92,13 +92,13 @@ export function RegistrationForm() {
       </div>
       <div className="space-y-2">
         <FormLabel>Nama ID / Username</FormLabel>
-        <div className="text-red-500 italic text-sm">
+        <div className="text-red-500 text-sm">
           <div className="flex">
             <div className="mr-1">
               <InformationCircleIcon className="w-5 h-5" />
             </div>
             <span>
-              <strong>Nama ID</strong> ini akan digunakan untuk login. Harap di ingat!
+              <strong>Nama ID</strong> ini akan digunakan untuk login. Harap diingat!
             </span>
           </div>
         </div>
@@ -109,14 +109,14 @@ export function RegistrationForm() {
       </div>
       <div className="space-y-2">
         <FormLabel>Kata Sandi / Password</FormLabel>
-        <div className="text-red-500 italic text-sm">
+        <div className="text-red-500  text-sm">
           <div className="flex">
             <div className="mr-1">
               <InformationCircleIcon className="w-5 h-5" />
             </div>
-            <div>
-              <strong>Kata Sandi</strong> ini akan digunakan untuk login. Harap di ingat!
-            </div>
+            <span>
+              <strong>Kata Sandi</strong> ini akan digunakan untuk login. Harap diingat!
+            </span>
           </div>
         </div>
         <div className="relative rounded-md shadow-sm">
