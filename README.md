@@ -1,6 +1,6 @@
 # Silacak
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.org/).
@@ -81,6 +81,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://zainf.dev"><img src="https://avatars.githubusercontent.com/u/6315466?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Zain Fathoni</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=zainfathoni" title="Code">💻</a> <a href="https://github.com/kawalcovid19/silacak/commits?author=zainfathoni" title="Documentation">📖</a> <a href="#ideas-zainfathoni" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-zainfathoni" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-zainfathoni" title="Maintenance">🚧</a> <a href="#mentoring-zainfathoni" title="Mentoring">🧑‍🏫</a> <a href="#projectManagement-zainfathoni" title="Project Management">📆</a> <a href="https://github.com/kawalcovid19/silacak/pulls?q=is%3Apr+reviewed-by%3Azainfathoni" title="Reviewed Pull Requests">👀</a> <a href="#tool-zainfathoni" title="Tools">🔧</a> <a href="https://github.com/kawalcovid19/silacak/commits?author=zainfathoni" title="Tests">⚠️</a></td>
     <td align="center"><a href="http://taxfix.de"><img src="https://avatars.githubusercontent.com/u/6219895?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aditya Purwa</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=adityapurwa" title="Code">💻</a></td>
     <td align="center"><a href="http://alvatih.com"><img src="https://avatars.githubusercontent.com/u/22621375?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammad Al Faris</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=dreamid27" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/asaadam"><img src="https://avatars.githubusercontent.com/u/1397612?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Akbar</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=asaadam" title="Documentation">📖</a></td>
   </tr>
 </table>
 
