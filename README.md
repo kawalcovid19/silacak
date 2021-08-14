@@ -1,7 +1,12 @@
 # Silacak
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+[![codecov](https://codecov.io/gh/kawalcovid19/silacak/branch/main/graph/badge.svg?token=6zs2LFCMFG)](https://codecov.io/gh/kawalcovid19/silacak)
 
 This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.org/).
 
