@@ -46,9 +46,11 @@ export default function TracingDashboardIndex() {
               <li>
                 <ConfirmedCasesCard />
               </li>
+              <li>
+                <ConfirmedCasesCard />
+              </li>
             </ul>
           </div>
-          <div className="border-4 border-dashed border-gray-200 rounded-lg h-96" />
         </div>
       </DashboardPageContent>
     </DashboardPage>
