@@ -8,7 +8,7 @@ import {
   buttonRoundedStyles,
   buttonSizes,
   disabledStyles,
-  primaryButtonColors,
+  outlineButtonColors,
   renderButtonIcon,
 } from "./utils";
 
@@ -17,7 +17,7 @@ import {
  *
  * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
  */
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const OutlineButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
@@ -43,7 +43,7 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         buttonSizes(size),
         buttonRoundedStyles(rounded, size),
         "items-center justify-center border border-transparent font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2",
-        primaryButtonColors(color),
+        outlineButtonColors(color),
         disabledStyles,
         className
       )}
@@ -64,4 +64,4 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
+OutlineButton.displayName = "OutlineButton";
