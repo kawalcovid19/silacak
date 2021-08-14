@@ -1,10 +1,12 @@
 # Silacak
 
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
-
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
 
 [![codecov](https://codecov.io/gh/kawalcovid19/silacak/branch/main/graph/badge.svg?token=6zs2LFCMFG)](https://codecov.io/gh/kawalcovid19/silacak)
 
