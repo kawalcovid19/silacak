@@ -2,12 +2,8 @@ import { CheckAccountForm } from "~/components/check-account";
 import { LayoutRoot } from "~/components/layout/home";
 import { HomePageContent } from "~/components/layout/home/home-content";
 import { Container } from "~/components/ui/container";
-import { useCheckData } from "~/lib/check-account/useCheckData";
 
 export default function RegistrationStatus() {
-  const { data, error } = useCheckData("latihan");
-  console.log("data", data);
-  console.log(error);
   return (
     <LayoutRoot>
       <HomePageContent className="sm:bg-gray-100 bg-white">

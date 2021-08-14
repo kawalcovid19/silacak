@@ -52,7 +52,7 @@ export function CheckAccountForm({ onSubmit }: LoginFormProps) {
           </button>
         </div>
       </form>
-      <CheckAccountBanner />
+      <CheckAccountBanner type="accepted" />
     </>
   );
 }
