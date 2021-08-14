@@ -20,9 +20,6 @@ const securityHeaders = [
 
 /** @type {import("next/dist/next-server/server/config-shared").NextConfig} */
 module.exports = {
-  publicRuntimeConfig: {
-    apiEndpoint: process.env.API_URL || "https://training-silacak.kemkes.go.id/",
-  },
   // https://github.com/vercel/next.js/blob/v11.0.1/packages/next/next-server/server/config-shared.ts#L42-L65
   experimental: {
     optimizeCss: true,
