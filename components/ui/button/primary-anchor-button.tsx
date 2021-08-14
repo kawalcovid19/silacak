@@ -1,10 +1,9 @@
 import * as React from "react";
 
 import clsx from "clsx";
-import { Spinner } from "../spinner";
 import {
+  AnchorButtonProps,
   buttonBlockStyles,
-  ButtonProps,
   buttonRoundedStyles,
   buttonSizes,
   disabledStyles,
@@ -13,11 +12,11 @@ import {
 } from "./utils";
 
 /**
- * Button component used for primary actions.
+ * Similar to `PrimaryButton`, but acts as a link.
  *
  * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
  */
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const PrimaryAnchorButton = React.forwardRef<HTMLAnchorElement, AnchorButtonProps>(
   (
     {
       className,
@@ -25,19 +24,16 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       type,
       block,
       size = "md",
-      color = "silacak",
+      color = "blue",
       rounded,
       icon,
       iconPosition = "left",
-      isLoading,
-      loadingText = "Memuat...",
-      disabled,
       children,
       ...rest
     },
     ref
   ) => (
-    <button
+    <a
       className={clsx(
         buttonBlockStyles(block, iconPosition),
         buttonSizes(size),
@@ -47,21 +43,14 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabledStyles,
         className
       )}
-      disabled={isLoading ?? disabled}
       ref={ref}
       style={style}
-      type={type ?? "button"}
       {...rest}
     >
-      {renderButtonIcon({
-        icon: isLoading ? Spinner : icon,
-        size,
-        additionalClasses: isLoading ? "animate-spin" : undefined,
-        iconPosition,
-      })}
-      {isLoading ? loadingText : children}
-    </button>
+      {renderButtonIcon({ icon, size, iconPosition })}
+      {children}
+    </a>
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
+PrimaryAnchorButton.displayName = "PrimaryAnchorButton";

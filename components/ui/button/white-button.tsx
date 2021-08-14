@@ -8,16 +8,15 @@ import {
   buttonRoundedStyles,
   buttonSizes,
   disabledStyles,
-  primaryButtonColors,
   renderButtonIcon,
 } from "./utils";
 
 /**
- * Button component used for primary actions.
+ * A white-canvas button as an alternative to the secondary variant button, or for other lesser-important actions.
  *
- * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
+ * @link https://tailwindui.com/components/application-ui/elements/buttons#component-109c4104d58d9fedfa8650dbe24c1ae8
  */
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const WhiteButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
@@ -25,10 +24,9 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       type,
       block,
       size = "md",
-      color = "silacak",
-      rounded,
       icon,
       iconPosition = "left",
+      rounded,
       isLoading,
       loadingText = "Memuat...",
       disabled,
@@ -42,8 +40,8 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         buttonBlockStyles(block, iconPosition),
         buttonSizes(size),
         buttonRoundedStyles(rounded, size),
-        "items-center justify-center border border-transparent font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2",
-        primaryButtonColors(color),
+        "items-center justify-center border border-transparent font-medium shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500",
+        "disabled:cursor-not-allowed",
         disabledStyles,
         className
       )}
@@ -64,4 +62,4 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
+WhiteButton.displayName = "WhiteButton";

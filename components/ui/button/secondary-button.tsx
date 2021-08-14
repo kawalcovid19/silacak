@@ -8,16 +8,16 @@ import {
   buttonRoundedStyles,
   buttonSizes,
   disabledStyles,
-  primaryButtonColors,
   renderButtonIcon,
+  secondaryButtonColors,
 } from "./utils";
 
 /**
- * Button component used for primary actions.
+ * A secondary button variant for actions that complement the primary button action.
  *
- * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
+ * @link https://tailwindui.com/components/application-ui/elements/buttons#component-9fc8ac3ded8cb313876bfa01742a0570
  */
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const SecondaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   (
     {
       className,
@@ -25,14 +25,14 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       type,
       block,
       size = "md",
-      color = "silacak",
+      color = "blue",
       rounded,
       icon,
       iconPosition = "left",
+      children,
       isLoading,
       loadingText = "Memuat...",
       disabled,
-      children,
       ...rest
     },
     ref
@@ -42,8 +42,8 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
         buttonBlockStyles(block, iconPosition),
         buttonSizes(size),
         buttonRoundedStyles(rounded, size),
-        "items-center justify-center border border-transparent font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2",
-        primaryButtonColors(color),
+        "items-center justify-center border border-transparent font-medium focus:outline-none focus:ring-2 focus:ring-offset-2",
+        secondaryButtonColors(color),
         disabledStyles,
         className
       )}
@@ -64,4 +64,4 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
+SecondaryButton.displayName = "SecondaryButton";
