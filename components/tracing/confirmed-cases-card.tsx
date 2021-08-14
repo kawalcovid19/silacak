@@ -3,8 +3,8 @@ import { OutlineButton, PrimaryButton } from "../ui/button";
 
 export function ConfirmedCasesCard() {
   return (
-    <div className="md:flex md:items-center px-4 py-4 sm:px-6">
-      <div className="flex-1 md:grid md:grid-cols-2 md:gap-4">
+    <div className="lg:flex lg:items-center px-4 py-4 sm:px-6">
+      <div className="flex-1 lg:grid lg:grid-cols-2 lg:gap-4">
         <div>
           <p className="text-sm font-semibold text-silacak-500">Muhammad Nuh</p>
           <p className="text-sm text-gray-900 font-semibold">PKM. KEL. PETOJO UTARA</p>
