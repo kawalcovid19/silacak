@@ -18,7 +18,8 @@
         "projectManagement",
         "review",
         "security",
-        "tool"
+        "tool",
+        "doc"
       ]
     }
   ],
