@@ -21,6 +21,24 @@
         "tool",
         "doc"
       ]
+    },
+    {
+      "login": "zainfathoni",
+      "name": "Zain Fathoni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6315466?v=4",
+      "profile": "https://zainf.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "infra",
+        "maintenance",
+        "mentoring",
+        "projectManagement",
+        "review",
+        "tool",
+        "test"
+      ]
     }
   ],
   "contributorsPerLine": 7,
