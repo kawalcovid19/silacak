@@ -19,7 +19,8 @@
         "review",
         "security",
         "tool",
-        "doc"
+        "doc",
+        "test"
       ]
     },
     {
