@@ -1,7 +1,14 @@
 # Silacak
+
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+[![codecov](https://codecov.io/gh/kawalcovid19/silacak/branch/main/graph/badge.svg?token=6zs2LFCMFG)](https://codecov.io/gh/kawalcovid19/silacak)
 
 This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.org/).
 
@@ -83,6 +90,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://alvatih.com"><img src="https://avatars.githubusercontent.com/u/22621375?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Muhammad Al Faris</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=dreamid27" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/asaadam"><img src="https://avatars.githubusercontent.com/u/1397612?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Akbar</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=asaadam" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/ramarahmanda"><img src="https://avatars.githubusercontent.com/u/12446260?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ramarahmanda</b></sub></a><br /><a href="#projectManagement-ramarahmanda" title="Project Management">📆</a> <a href="#ideas-ramarahmanda" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/auliazahrina"><img src="https://avatars.githubusercontent.com/u/44616024?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aulia Zahrina Qashri</b></sub></a><br /><a href="#projectManagement-auliazahrina" title="Project Management">📆</a> <a href="https://github.com/kawalcovid19/silacak/commits?author=auliazahrina" title="Documentation">📖</a> <a href="#ideas-auliazahrina" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
