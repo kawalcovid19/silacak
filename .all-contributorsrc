@@ -39,6 +39,15 @@
         "tool",
         "test"
       ]
+    },
+    {
+      "login": "adityapurwa",
+      "name": "Aditya Purwa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6219895?v=4",
+      "profile": "http://taxfix.de",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
