@@ -1,4 +1,7 @@
 # Silacak
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.org/).
 
@@ -64,3 +67,23 @@ When contributing to our project, please use English when communicating with oth
 ## API
 
 Our API documentation is in [api-refrence.md](docs/api-reference.md) file.
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://resir014.xyz"><img src="https://avatars.githubusercontent.com/u/5663877?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Resi Respati</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=resir014" title="Code">💻</a> <a href="#design-resir014" title="Design">🎨</a> <a href="#infra-resir014" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-resir014" title="Maintenance">🚧</a> <a href="#projectManagement-resir014" title="Project Management">📆</a> <a href="https://github.com/kawalcovid19/silacak/pulls?q=is%3Apr+reviewed-by%3Aresir014" title="Reviewed Pull Requests">👀</a> <a href="#security-resir014" title="Security">🛡️</a> <a href="#tool-resir014" title="Tools">🔧</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
