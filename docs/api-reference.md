@@ -11,8 +11,16 @@
 - [List city district by province id](#list-city-district-by-province-id)
 - [List unit tracer by city district sub district id](#list-unit-tracer-by-city-district-sub-district-id)
 - [List puskesmas user by puskesmas name](#list-puskesmas-user-by-puskesmas-name)
+- [Detail User](#detail-user)
+- [Detail Confirmed Case](#detail-confirmed-case)
+- [List Confirmed Cases](#list-confirmed-cases)
+- [Add Close Contact](#add-close-contact)
+- [List Program](#list-program)
+- [Completed Monitoring Close Contact](#completed-monitoring-close-contact)
+- [Add Monitoring](#add-monitoring)
 - [Check registration status](#check-registration-status)
 - [Attendance close contact](#attendance-close-contact)
+
 ## Login
 ```yaml
 headers:
@@ -634,6 +642,31 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/users/B
 }
 ```
 
+
+
+
+
+
+## Detail Confirmed Case
+### CURL
+```bash
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances/Y8pSX7O6Uy8.json?program=gZrezya1BvN&ou=xtpPPC95Tjl&attribute=vyWUq8BAnwg,GdwLfGObIRT,taFkwTiKFyR,xu1Ukzi0PMJ,fk5drl1hTvc,quJD4An7Kmi,mHwPpgxFDge,e25qAod3KTg,YlOp8W4FYRH&fields=*&order=lastUpdated:DESC' \
+--header 'Connection: keep-alive' \
+--header 'sec-ch-ua: "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"' \
+--header 'Accept: application/json' \
+--header 'DNT: 1' \
+--header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+--header 'sec-ch-ua-mobile: ?0' \
+--header 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.107 Safari/537.36' \
+--header 'Origin: http://localhost:3000' \
+--header 'Sec-Fetch-Site: cross-site' \
+--header 'Sec-Fetch-Mode: cors' \
+--header 'Sec-Fetch-Dest: empty' \
+--header 'Referer: http://localhost:3000/' \
+--header 'Accept-Language: en-US,en;q=0.9,id-ID;q=0.8,id;q=0.7' \
+--header 'If-None-Match: W/"0194deb812d0ba269b0947468eb2870b3"' \
+--header 'Cookie: BIGipServerpool_silacakprod_dev_http=3291588800.47873.0000; JSESSIONID=E916534BCBAF3F1CC2BD7EEC2CE0A968'
+```
 ## List Confirmed Cases
 
 ### Path
