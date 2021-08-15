@@ -1,23 +1,22 @@
 import * as React from "react";
 
 import clsx from "clsx";
-import { Spinner } from "../spinner";
 import {
+  AnchorButtonProps,
   buttonBlockStyles,
-  ButtonProps,
   buttonRoundedStyles,
   buttonSizes,
   disabledStyles,
-  primaryButtonColors,
+  outlineButtonColors,
   renderButtonIcon,
 } from "./utils";
 
 /**
- * Button component used for primary actions.
+ * Similar to `PrimaryButton`, but acts as a link.
  *
  * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
  */
-export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const OutlineAnchorButton = React.forwardRef<HTMLAnchorElement, AnchorButtonProps>(
   (
     {
       className,
@@ -29,39 +28,29 @@ export const PrimaryButton = React.forwardRef<HTMLButtonElement, ButtonProps>(
       rounded,
       icon,
       iconPosition = "left",
-      isLoading,
-      loadingText = "Memuat...",
-      disabled,
       children,
       ...rest
     },
     ref
   ) => (
-    <button
+    <a
       className={clsx(
         buttonBlockStyles(block, iconPosition),
         buttonSizes(size),
         buttonRoundedStyles(rounded, size),
         "items-center justify-center border border-transparent font-medium shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-2",
-        primaryButtonColors(color),
+        outlineButtonColors(color),
         disabledStyles,
         className
       )}
-      disabled={isLoading ?? disabled}
       ref={ref}
       style={style}
-      type={type ?? "button"}
       {...rest}
     >
-      {renderButtonIcon({
-        icon: isLoading ? Spinner : icon,
-        size,
-        additionalClasses: isLoading ? "animate-spin" : undefined,
-        iconPosition,
-      })}
-      {isLoading ? loadingText : children}
-    </button>
+      {renderButtonIcon({ icon, size, iconPosition })}
+      {children}
+    </a>
   )
 );
 
-PrimaryButton.displayName = "PrimaryButton";
+OutlineAnchorButton.displayName = "OutlineAnchorButton";

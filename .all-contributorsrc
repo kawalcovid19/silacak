@@ -1,0 +1,99 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "resir014",
+      "name": "Resi Respati",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5663877?v=4",
+      "profile": "https://resir014.xyz",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "maintenance",
+        "projectManagement",
+        "review",
+        "security",
+        "tool",
+        "doc",
+        "test"
+      ]
+    },
+    {
+      "login": "zainfathoni",
+      "name": "Zain Fathoni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6315466?v=4",
+      "profile": "https://zainf.dev",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "infra",
+        "maintenance",
+        "mentoring",
+        "projectManagement",
+        "review",
+        "tool",
+        "test"
+      ]
+    },
+    {
+      "login": "adityapurwa",
+      "name": "Aditya Purwa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6219895?v=4",
+      "profile": "http://taxfix.de",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dreamid27",
+      "name": "Muhammad Al Faris",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22621375?v=4",
+      "profile": "http://alvatih.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "asaadam",
+      "name": "Adam Akbar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1397612?v=4",
+      "profile": "https://github.com/asaadam",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "ramarahmanda",
+      "name": "ramarahmanda",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12446260?v=4",
+      "profile": "https://www.linkedin.com/in/ramarahmanda",
+      "contributions": [
+        "projectManagement",
+        "ideas"
+      ]
+    },
+    {
+      "login": "auliazahrina",
+      "name": "Aulia Zahrina Qashri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44616024?v=4",
+      "profile": "https://github.com/auliazahrina",
+      "contributions": [
+        "projectManagement",
+        "doc",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "silacak",
+  "projectOwner": "kawalcovid19",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

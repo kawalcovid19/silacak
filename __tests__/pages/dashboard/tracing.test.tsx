@@ -4,10 +4,13 @@ import TracingDashboardIndex from "~/pages/dashboard/tracing";
 jest.mock("next/router", () => require("next-router-mock"));
 
 describe("DashboardIndex", () => {
-  it("renders without crashing", () => {
+  it("renders the correct page header", () => {
     render(<TracingDashboardIndex />);
 
-    const title = screen.getByText(/Dashboard/i);
+    const title = screen.getByText(/Anda terdaftar pada/i);
     expect(title).toBeVisible();
+
+    const selectButton = screen.getByRole("button", { name: /tetapkan/i });
+    expect(selectButton).toBeVisible();
   });
 });
