@@ -1,6 +1,6 @@
 import { SubmitHandler, useForm } from "react-hook-form";
 
-import { CheckAccountBanner } from "./check-account-banner";
+// import { CheckAccountBanner } from "./check-account-banner";
 import { FormLabel, InputText } from "~/components/ui/forms";
 
 export interface CheckAccountValues {
@@ -52,7 +52,10 @@ export function CheckAccountForm({ onSubmit }: LoginFormProps) {
           </button>
         </div>
       </form>
+      {/* commented for now
+      this component to show current account status
       <CheckAccountBanner type="accepted" />
+      */}
     </>
   );
 }
