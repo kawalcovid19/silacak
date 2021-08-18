@@ -18,11 +18,51 @@ This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.or
 
 - [Figma file](https://www.figma.com/file/a4l6zqfnLyjG9h9Qyj6QsE/Silacak)
 
-## Purpose and Principles
+## Purpose, Principles, and Guidelines
+
+The project's purpose, principles, and guidelines, take some cues from the [WargaBantuWarga.com](https://www.wargabantuwarga.com/) project.
+
+<!-- ### Purpose -->
 
 ### Principles
 
-The project's principles take some cues from the principles from the [WargaBantuWarga.com](https://www.wargabantuwarga.com/) project. Please [read these principles](https://github.com/kawalcovid19/wargabantuwarga.com/blob/main/README.md#principles) if you want to contribute to the project.
+> What we're striving for:
+
+#### ✅ Performance
+
+Our website must be high-performant because our audience is spread across Indonesia with varying types of devices and network speed. A good measurement of it is Google's [Core Web Vitals](https://web.dev/vitals/).
+
+#### ✅ Accessibility
+
+Our website must be accessible so that we can reach more users and help more people.
+
+#### ✅ Up-to-date Information
+
+Any information posted on our website must be up-to-date to the latest version that our content editors published. We can tolerate delays to a certain degree for the sake of web performance, but it should be limited to less than an hour.
+
+> What we're going against:
+
+#### ❌ Counter-productive Cosmetics
+
+We can't afford to hurt web performance or to provide outdated information just for the sake of the beauty of the website.
+
+#### ❌ Expensive Functionalities
+
+We must carefully consider any additional client-side libraries that we include on the website. Unless its benefits outweigh the trade-off that we have to pay, we should avoid adding the functionality. Even if it is proven to be beneficial, we should strive to implement it in the best possible way. An excellent example of it is [Google Analytics](https://github.com/kawalcovid19/wargabantuwarga.com/issues/18).
+
+#### ❌ Unmeasured Improvements
+
+For any improvements on the website, we should continuously measure its impact on the [Core Web Vitals](https://web.dev/vitals/). If proven to hurt the metrics, we should revert the changes and find another way to implement them without degrading the performance.
+
+### Guidelines
+
+In general, these are three guidelines that we need to pay attention to:
+
+1. [Query priorities](https://testing-library.com/docs/queries/about#priority)
+2. [Testing appearance and disappearance](https://testing-library.com/docs/guide-disappearance/)
+3. [Opting in for interactions instead of events](https://testing-library.com/docs/guide-events/#interactions-vs-events)
+
+Please ensure that all queries and assertions in your test files comply with those testing guidelines.
 
 ## Getting Started
 
