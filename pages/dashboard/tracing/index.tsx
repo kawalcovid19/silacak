@@ -4,7 +4,7 @@ import { ConfirmedCasesHeader } from "~/components/tracing/confirmed-cases-heade
 import { PrimaryButton } from "~/components/ui/button";
 import { FormLabel, InputSelect } from "~/components/ui/forms";
 
-export default function TracingDashboardIndex() {
+export default function TracingList() {
   return (
     <DashboardPage>
       <ConfirmedCasesHeader>

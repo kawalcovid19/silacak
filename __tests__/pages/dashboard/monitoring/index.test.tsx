@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import TracingDashboardIndex from "~/pages/dashboard/tracing";
+import MonitoringList from "~/pages/dashboard/monitoring";
 
 jest.mock("next/router", () => require("next-router-mock"));
 
-describe("DashboardIndex", () => {
+describe("MonitoringList", () => {
   it("renders the correct page header", () => {
-    render(<TracingDashboardIndex />);
+    render(<MonitoringList />);
 
     const title = screen.getByText(/Anda terdaftar pada/i);
     expect(title).toBeVisible();

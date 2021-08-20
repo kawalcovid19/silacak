@@ -1,5 +1,6 @@
 import { PlusIcon } from "@heroicons/react/outline";
-import { OutlineButton, PrimaryButton } from "../ui/button";
+import Link from "next/link";
+import { OutlineAnchorButton, PrimaryButton } from "../ui/button";
 
 export function ConfirmedCasesCard() {
   return (
@@ -20,7 +21,9 @@ export function ConfirmedCasesCard() {
       </div>
       <div className="flex flex-none items-start mt-4 lg:mt-0 lg:ml-4 space-x-4">
         <PrimaryButton icon={PlusIcon}>Kontak Erat</PrimaryButton>
-        <OutlineButton>Lihat Detil</OutlineButton>
+        <Link href="/dashboard/tracing/123" passHref>
+          <OutlineAnchorButton>Lihat Detil</OutlineAnchorButton>
+        </Link>
       </div>
     </div>
   );
