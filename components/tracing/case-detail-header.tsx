@@ -4,7 +4,7 @@ import { Container } from "~/components/ui/container";
 
 export type ConfirmedCasesHeaderProps = ComponentPropsWithoutRef<"div">;
 
-export const ConfirmedCasesHeader = forwardRef<HTMLDivElement, ConfirmedCasesHeaderProps>(
+export const CaseDetailHeader = forwardRef<HTMLDivElement, ConfirmedCasesHeaderProps>(
   ({ className, children, ...rest }, ref) => {
     return (
       <div
@@ -18,4 +18,4 @@ export const ConfirmedCasesHeader = forwardRef<HTMLDivElement, ConfirmedCasesHea
   }
 );
 
-ConfirmedCasesHeader.displayName = "ConfirmedCaseHeader";
+CaseDetailHeader.displayName = "ConfirmedCaseHeader";

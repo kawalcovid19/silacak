@@ -1,6 +1,11 @@
+import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
+import Link from "next/link";
 import { useRouter } from "next/router";
-import { DashboardPage, DashboardPageContent } from "~/components/layout/dashboard";
-import { ConfirmedCasesHeader } from "~/components/tracing/confirmed-cases-header";
+import {
+  DashboardPage,
+  DashboardPageHeader,
+  DashboardPageContent,
+} from "~/components/layout/dashboard";
 
 export default function TracingCaseDetail() {
   const router = useRouter();
@@ -9,8 +14,25 @@ export default function TracingCaseDetail() {
 
   return (
     <DashboardPage>
-      <ConfirmedCasesHeader>Header</ConfirmedCasesHeader>
-      <DashboardPageContent>Content</DashboardPageContent>
+      <DashboardPageHeader>
+        <div className="space-y-4">
+          <div className="flex flex-row space-x-4">
+            <div className="flex w-8 h-8 items-center justify-center">
+              <Link href="/dashboard/tracing">
+                <a className="text-silacak-500 hover:text-silacak-700" title="Kembali">
+                  <span className="sr-only">Kembali</span>
+                  <ArrowCircleLeftIcon aria-hidden className="w-8 h-8" />
+                </a>
+              </Link>
+            </div>
+            <div>
+              <h1 className="text-2xl font-semibold">Detail Kasus Konfirmasi</h1>
+            </div>
+          </div>
+          <div>Header Sub (Informasi Utama, etc.)</div>
+        </div>
+      </DashboardPageHeader>
+      <DashboardPageContent>Content (Daftar Kontak Erat, etc.)</DashboardPageContent>
     </DashboardPage>
   );
 }
