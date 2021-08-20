@@ -1,11 +1,16 @@
 import Head from "next/head";
 import { ExclamationCircleIcon } from "@heroicons/react/outline";
+import { useRouter } from "next/router";
 import { Container } from "~/components/ui/container";
 import { LayoutRoot, LoginForm } from "~/components/layout/home";
 import { HomePageContent } from "~/components/layout/home/home-content";
 
 export default function Home() {
-  const handleSubmit = () => {};
+  const router = useRouter();
+
+  const handleSubmit = () => {
+    void router.push("/dashboard");
+  };
 
   return (
     <LayoutRoot>
