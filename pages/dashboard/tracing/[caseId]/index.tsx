@@ -19,8 +19,11 @@ export default function TracingCaseDetail() {
           <div className="flex flex-row space-x-4">
             <div className="flex w-8 h-8 items-center justify-center">
               <Link href="/dashboard/tracing">
-                <a className="text-silacak-500 hover:text-silacak-700" title="Kembali">
-                  <span className="sr-only">Kembali</span>
+                <a
+                  aria-label="Kembali"
+                  className="text-silacak-500 hover:text-silacak-700"
+                  title="Kembali"
+                >
                   <ArrowCircleLeftIcon aria-hidden className="w-8 h-8" />
                 </a>
               </Link>

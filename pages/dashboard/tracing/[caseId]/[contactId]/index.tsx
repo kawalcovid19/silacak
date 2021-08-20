@@ -22,8 +22,11 @@ export default function TracingCaseContactDetail() {
               as={`/dashboard/tracing/${router.query.caseId}`}
               href="/dashboard/tracing/[caseId]"
             >
-              <a className="text-silacak-500 hover:text-silacak-700" title="Kembali">
-                <span className="sr-only">Kembali</span>
+              <a
+                aria-label="Kembali"
+                className="text-silacak-500 hover:text-silacak-700"
+                title="Kembali"
+              >
                 <ArrowCircleLeftIcon aria-hidden className="w-8 h-8" />
               </a>
             </Link>
