@@ -7,9 +7,10 @@
     "kentcdodds/jsx-a11y",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:@next/next/recommended"
+    "plugin:@next/next/recommended",
+    "plugin:cypress/recommended"
   ],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "cypress", "chai-friendly"],
   "rules": {
     "@babel/new-cap": "off",
     "@typescript-eslint/no-explicit-any": "warn",
@@ -36,6 +37,8 @@
     "jsx-a11y/accessible-emoji": "off",
     "react/jsx-sort-props": ["warn", { "reservedFirst": ["key"] }],
     "react/react-in-jsx-scope": ["off"],
+    "cypress/no-unnecessary-waiting": "warn",
+    "chai-friendly/no-unused-expressions": 2,
     "@babel/no-unused-expressions": 0
   },
   "settings": {
