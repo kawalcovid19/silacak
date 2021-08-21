@@ -2,11 +2,13 @@ import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
+import { CaseInformationItem } from "~/components/cases/case-information-item";
 import {
   DashboardPage,
   DashboardPageContent,
   DashboardPageHeader,
 } from "~/components/layout/dashboard";
+import { SectionCard, SectionCardHeader } from "~/components/ui/card";
 
 export default function Monitor() {
   const router = useRouter();
@@ -34,7 +36,23 @@ export default function Monitor() {
           </div>
         </div>
       </DashboardPageHeader>
-      <DashboardPageContent>Content</DashboardPageContent>
+      <DashboardPageContent>
+        <div className="space-y-4">
+          <SectionCard className="space-y-6">
+            <div className="space-y-4">
+              <SectionCardHeader title="INFORMASI UTAMA" />
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+                <CaseInformationItem label="NIK" value="3401230000000001" />
+                <CaseInformationItem label="Nama Pasien" value="Muhammad Nuh" />
+                <CaseInformationItem label="Tanggal Lahir" value="13 Juni 1995 (26 thn 1 bln)" />
+                <CaseInformationItem label="Jenis Kelamin" value="Laki-laki" />
+                <CaseInformationItem label="No Telp/HP" value="085847475454" />
+                <CaseInformationItem label="Alamat" value="Jl HR Rasuna Said Kav C17" />
+              </div>
+            </div>
+          </SectionCard>
+        </div>
+      </DashboardPageContent>
     </DashboardPage>
   );
 }
