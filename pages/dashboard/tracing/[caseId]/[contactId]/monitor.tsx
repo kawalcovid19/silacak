@@ -8,6 +8,7 @@ import {
   DashboardPageContent,
   DashboardPageHeader,
 } from "~/components/layout/dashboard";
+import { OutlineButton, PrimaryButton } from "~/components/ui/button";
 import { SectionCard, SectionCardHeader } from "~/components/ui/card";
 
 export default function Monitor() {
@@ -55,6 +56,22 @@ export default function Monitor() {
               <div>
                 <div className="font-light">Tanggal dilakukan kunjungan ulang</div>
                 <div className="text-2xl font-bold">Minggu, 08 Agustus 2021</div>
+              </div>
+              <div>
+                <div>Jenis Karantina</div>
+                <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
+                  <div>
+                    <PrimaryButton type="button">Tidak Karantina</PrimaryButton>
+                  </div>
+                  <div>
+                    <OutlineButton type="button">Karantina mandiri di rumah</OutlineButton>
+                  </div>
+                  <div>
+                    <OutlineButton type="button">
+                      Karantina mandiri di fasilitas khusus
+                    </OutlineButton>
+                  </div>
+                </div>
               </div>
             </div>
           </SectionCard>
