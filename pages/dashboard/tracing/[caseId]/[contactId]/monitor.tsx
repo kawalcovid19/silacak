@@ -1,15 +1,19 @@
 import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { DashboardPage, DashboardPageContent } from "~/components/layout/dashboard";
-import { ConfirmedCasesHeader } from "~/components/tracing/confirmed-cases-header";
+import React from "react";
+import {
+  DashboardPage,
+  DashboardPageContent,
+  DashboardPageHeader,
+} from "~/components/layout/dashboard";
 
 export default function Monitor() {
   const router = useRouter();
 
   return (
     <DashboardPage>
-      <ConfirmedCasesHeader>
+      <DashboardPageHeader variant="alternate">
         <div className="flex flex-row space-x-4">
           <div className="flex w-8 h-8 items-center justify-center">
             <Link
@@ -29,7 +33,7 @@ export default function Monitor() {
             <h1 className="text-2xl font-semibold">Tambah Pemantauan</h1>
           </div>
         </div>
-      </ConfirmedCasesHeader>
+      </DashboardPageHeader>
       <DashboardPageContent>Content</DashboardPageContent>
     </DashboardPage>
   );
