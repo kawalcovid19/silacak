@@ -7,9 +7,7 @@ import {
   DashboardPageHeader,
   DashboardPageContent,
 } from "~/components/layout/dashboard";
-import { PrimaryButton } from "~/components/ui/button";
 import { SectionCard, SectionCardHeader } from "~/components/ui/card";
-import { FormLabel, InputSelect } from "~/components/ui/forms";
 
 export default function TracingCaseDetail() {
   const router = useRouter();
@@ -48,16 +46,6 @@ export default function TracingCaseDetail() {
                 <CaseInformationItem label="Jenis Kelamin" value="Laki-laki" />
                 <CaseInformationItem label="No Telp/HP" value="085847475454" />
                 <CaseInformationItem label="Alamat" value="Jl HR Rasuna Said Kav C17" />
-              </div>
-            </div>
-            <hr />
-            <div className="space-y-1">
-              <FormLabel>Status Kasus Konfirmasi</FormLabel>
-              <div className="flex flex-row space-x-2">
-                <InputSelect>
-                  <option value="a">Kasus konfirmasi bersedia dihubungi dan diwawancara</option>
-                </InputSelect>
-                <PrimaryButton>Tetapkan</PrimaryButton>
               </div>
             </div>
           </SectionCard>
