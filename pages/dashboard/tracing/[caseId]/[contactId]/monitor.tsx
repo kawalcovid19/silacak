@@ -51,13 +51,13 @@ export default function Monitor() {
                 <CaseInformationItem label="Alamat" value="Jl HR Rasuna Said Kav C17" />
               </div>
             </div>
-            <div className="space-y-4 pt-6">
+            <div className="space-y-6 pt-6">
               <SectionCardHeader title="PEMANTAUAN" />
-              <div>
+              <div className="space-y-2">
                 <div className="font-light">Tanggal dilakukan kunjungan ulang</div>
                 <div className="text-2xl font-bold">Minggu, 08 Agustus 2021</div>
               </div>
-              <div>
+              <div className="space-y-4">
                 <div>Jenis Karantina</div>
                 <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
                   <div>
@@ -72,6 +72,27 @@ export default function Monitor() {
                     </OutlineButton>
                   </div>
                 </div>
+              </div>
+              <div className="space-y-4">
+                <div>Hasil Pemantauan</div>
+                <div className="lg:flex lg:space-x-2 space-y-4 lg:space-y-0">
+                  <div>
+                    <PrimaryButton type="button">Sehat</PrimaryButton>
+                  </div>
+                  <div>
+                    <OutlineButton type="button">Bergejala (Suspek)</OutlineButton>
+                  </div>
+                  <div>
+                    <OutlineButton type="button">Rujuk RS</OutlineButton>
+                  </div>
+                  <div>
+                    <OutlineButton type="button">Meninggal</OutlineButton>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-4 pt-6">
+                <div className="w-full border-t border-gray-300" />
+                <PrimaryButton type="button">Simpan Data</PrimaryButton>
               </div>
             </div>
           </SectionCard>
