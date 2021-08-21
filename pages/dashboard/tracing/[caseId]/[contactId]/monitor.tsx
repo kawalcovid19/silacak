@@ -50,6 +50,13 @@ export default function Monitor() {
                 <CaseInformationItem label="Alamat" value="Jl HR Rasuna Said Kav C17" />
               </div>
             </div>
+            <div className="space-y-4 pt-6">
+              <SectionCardHeader title="PEMANTAUAN" />
+              <div>
+                <div className="font-light">Tanggal dilakukan kunjungan ulang</div>
+                <div className="text-2xl font-bold">Minggu, 08 Agustus 2021</div>
+              </div>
+            </div>
           </SectionCard>
         </div>
       </DashboardPageContent>
