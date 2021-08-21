@@ -3,7 +3,7 @@
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
@@ -131,6 +131,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/asaadam"><img src="https://avatars.githubusercontent.com/u/1397612?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adam Akbar</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=asaadam" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/ramarahmanda"><img src="https://avatars.githubusercontent.com/u/12446260?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ramarahmanda</b></sub></a><br /><a href="#projectManagement-ramarahmanda" title="Project Management">📆</a> <a href="#ideas-ramarahmanda" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/auliazahrina"><img src="https://avatars.githubusercontent.com/u/44616024?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aulia Zahrina Qashri</b></sub></a><br /><a href="#projectManagement-auliazahrina" title="Project Management">📆</a> <a href="https://github.com/kawalcovid19/silacak/commits?author=auliazahrina" title="Documentation">📖</a> <a href="#ideas-auliazahrina" title="Ideas, Planning, & Feedback">🤔</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/dekwahdimas"><img src="https://avatars.githubusercontent.com/u/56619123?v=4?s=100" width="100px;" alt=""/><br /><sub><b>IGN Bagus Dimas W.</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=dekwahdimas" title="Code">💻</a></td>
   </tr>
 </table>
 
