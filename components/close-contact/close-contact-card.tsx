@@ -10,7 +10,7 @@ export function CloseContactCard() {
     <div className="lg:flex lg:items-center px-4 py-4 sm:px-6">
       <div className="flex-1 lg:grid lg:grid-cols-2 lg:gap-4">
         <div>
-          <p className="text-sm font-semibold text-silacak-500">Muhammad Nuh</p>
+          <p className="text-sm font-semibold text-silacak-500">Chairul Amar</p>
           <p className="text-sm text-gray-900 font-semibold">PKM. KEL. PETOJO UTARA</p>
         </div>
         <div>
