@@ -10,38 +10,44 @@ export default function QuarantineType() {
       <div>Jenis Karantina</div>
       <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
         <div>
-          <OptionButton onClick={() => setSelect(1)} selected={select === 1} type="button">
+          <OptionButton
+            className="w-full md:w-max"
+            onClick={() => setSelect(1)}
+            selected={select === 1}
+            type="button"
+          >
             Tidak Karantina
           </OptionButton>
         </div>
         <div>
-          <OptionButton onClick={() => setSelect(2)} selected={select === 2} type="button">
+          <OptionButton
+            className="w-full md:w-max"
+            onClick={() => setSelect(2)}
+            selected={select === 2}
+            type="button"
+          >
             Karantina mandiri di rumah
           </OptionButton>
         </div>
         <div>
-          <OptionButton onClick={() => setSelect(3)} selected={select === 3} type="button">
+          <OptionButton
+            className="w-full md:w-max"
+            onClick={() => setSelect(3)}
+            selected={select === 3}
+            type="button"
+          >
             Karantina mandiri di fasilitas khusus
           </OptionButton>
         </div>
       </div>
       <div>
-        <QuarantineOption option={select} />
+        <div className="py-4 space-y-2" hidden={select !== 3}>
+          <div>Nama Lokasi Karantina</div>
+          <div className="w-full lg:max-w-lg">
+            <InputText placeholder="Masukkan nama lokasi karantina" />
+          </div>
+        </div>
       </div>
     </div>
   );
-}
-
-function QuarantineOption(props: { option: number }): JSX.Element | null {
-  if (props.option === 3) {
-    return (
-      <div className="py-4 space-y-2">
-        <div>Nama Lokasi Karantina</div>
-        <div className="max-w-lg">
-          <InputText placeholder="Masukkan nama lokasi karantina" />
-        </div>
-      </div>
-    );
-  }
-  return null;
 }

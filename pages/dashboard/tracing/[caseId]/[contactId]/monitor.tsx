@@ -61,9 +61,11 @@ export default function Monitor() {
               </div>
               <QuarantineType />
               <MonitoringResult />
-              <div className="space-y-4 pt-6">
+              <div className="space-y-4">
                 <div className="w-full border-t border-gray-300" />
-                <PrimaryButton type="button">Simpan Data</PrimaryButton>
+                <PrimaryButton className="w-full md:w-max" type="button">
+                  Simpan Data
+                </PrimaryButton>
               </div>
             </div>
           </SectionCard>
