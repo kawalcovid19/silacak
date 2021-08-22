@@ -56,8 +56,8 @@ export default function Monitor() {
             <div className="space-y-6 pt-6">
               <SectionCardHeader title="Pemantauan" />
               <div className="space-y-2">
-                <div className="font-light">Tanggal dilakukan kunjungan ulang</div>
-                <div className="text-2xl font-bold">Minggu, 08 Agustus 2021</div>
+                <span className="font-light">Tanggal dilakukan kunjungan ulang</span>
+                <span className="text-2xl font-bold">Minggu, 08 Agustus 2021</span>
               </div>
               <QuarantineType />
               <MonitoringResult />
