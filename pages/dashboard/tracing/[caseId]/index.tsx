@@ -36,7 +36,7 @@ export default function TracingCaseDetail() {
         </div>
       </DashboardPageHeader>
       <DashboardPageContent>
-        <div className="space-y-8">
+        <div className="space-y-8 pb-20 md:pb-0">
           <SectionCard className="space-y-6">
             <div className="space-y-4">
               <SectionCardHeader title="Informasi Utama" />
@@ -58,7 +58,6 @@ export default function TracingCaseDetail() {
                 </h2>
               </div>
               <div className="hidden md:flex md:ml-4">
-                {/* TODO: add floating version for mobile */}
                 <AddCloseContactButton onClick={handleAddCloseContact} />
               </div>
             </div>
@@ -80,6 +79,9 @@ export default function TracingCaseDetail() {
           </div>
         </div>
       </DashboardPageContent>
+      <div className="block md:hidden fixed bottom-0 w-full bg-white p-4 shadow-floating z-30">
+        <AddCloseContactButton onClick={handleAddCloseContact} />
+      </div>
     </DashboardPage>
   );
 }

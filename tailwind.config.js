@@ -19,6 +19,9 @@ module.exports = {
           900: "#0a2924",
         },
       },
+      boxShadow: {
+        floating: "0px -4px 16px rgba(0, 0, 0, 0.1)",
+      },
     },
   },
   variants: {
