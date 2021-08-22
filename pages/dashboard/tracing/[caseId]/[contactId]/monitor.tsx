@@ -8,8 +8,9 @@ import {
   DashboardPageContent,
   DashboardPageHeader,
 } from "~/components/layout/dashboard";
-import QuarantineType from "~/components/monitoring/quarantine-type";
-import { OutlineButton, PrimaryButton } from "~/components/ui/button";
+import MonitoringResult from "~/components/monitoring/monitoring-result-section";
+import QuarantineType from "~/components/monitoring/quarantine-type-section";
+import { PrimaryButton } from "~/components/ui/button";
 import { SectionCard, SectionCardHeader } from "~/components/ui/card";
 
 export default function Monitor() {
@@ -59,23 +60,7 @@ export default function Monitor() {
                 <div className="text-2xl font-bold">Minggu, 08 Agustus 2021</div>
               </div>
               <QuarantineType />
-              <div className="space-y-4">
-                <div>Hasil Pemantauan</div>
-                <div className="lg:flex lg:space-x-4 space-y-4 lg:space-y-0">
-                  <div>
-                    <PrimaryButton type="button">Sehat</PrimaryButton>
-                  </div>
-                  <div>
-                    <OutlineButton type="button">Bergejala (Suspek)</OutlineButton>
-                  </div>
-                  <div>
-                    <OutlineButton type="button">Rujuk RS</OutlineButton>
-                  </div>
-                  <div>
-                    <OutlineButton type="button">Meninggal</OutlineButton>
-                  </div>
-                </div>
-              </div>
+              <MonitoringResult />
               <div className="space-y-4 pt-6">
                 <div className="w-full border-t border-gray-300" />
                 <PrimaryButton type="button">Simpan Data</PrimaryButton>

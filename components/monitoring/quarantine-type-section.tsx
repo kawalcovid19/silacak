@@ -37,7 +37,7 @@ function QuarantineOption(props: { option: number }): JSX.Element | null {
     return (
       <div className="py-4 space-y-2">
         <div>Nama Lokasi Karantina</div>
-        <div className="min-w-max">
+        <div className="max-w-lg">
           <InputText placeholder="Masukkan nama lokasi karantina" />
         </div>
       </div>
