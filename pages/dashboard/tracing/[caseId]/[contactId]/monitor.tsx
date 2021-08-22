@@ -43,7 +43,7 @@ export default function Monitor() {
         <div className="space-y-4">
           <SectionCard className="space-y-6">
             <div className="space-y-4">
-              <SectionCardHeader title="INFORMASI UTAMA" />
+              <SectionCardHeader title="Informasi Utama" />
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
                 <CaseInformationItem label="NIK" value="3401230000000001" />
                 <CaseInformationItem label="Nama Pasien" value="Muhammad Nuh" />
