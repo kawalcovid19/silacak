@@ -2,6 +2,7 @@ import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { CaseInformationItem } from "~/components/cases/case-information-item";
+import { CloseContactList } from "~/components/close-contact/close-contact-list";
 import {
   DashboardPage,
   DashboardPageHeader,
@@ -35,7 +36,7 @@ export default function TracingCaseDetail() {
         </div>
       </DashboardPageHeader>
       <DashboardPageContent>
-        <div className="space-y-4">
+        <div className="space-y-8">
           <SectionCard className="space-y-6">
             <div className="space-y-4">
               <SectionCardHeader title="Informasi Utama" />
@@ -49,7 +50,7 @@ export default function TracingCaseDetail() {
               </div>
             </div>
           </SectionCard>
-          <div>Content Secondary (Daftar Kontak Erat, etc.)</div>
+          <CloseContactList />
         </div>
       </DashboardPageContent>
     </DashboardPage>
