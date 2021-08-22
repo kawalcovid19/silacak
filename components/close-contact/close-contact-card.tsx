@@ -1,8 +1,11 @@
 import { PlusIcon } from "@heroicons/react/outline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { OutlineAnchorButton, PrimaryButton } from "../ui/button";
 
 export function CloseContactCard() {
+  const router = useRouter();
+
   return (
     <div className="lg:flex lg:items-center px-4 py-4 sm:px-6">
       <div className="flex-1 lg:grid lg:grid-cols-2 lg:gap-4">
@@ -21,7 +24,11 @@ export function CloseContactCard() {
       </div>
       <div className="flex flex-none items-start mt-4 lg:mt-0 lg:ml-4 space-x-4">
         <PrimaryButton icon={PlusIcon}>Pemantauan</PrimaryButton>
-        <Link href="/dashboard/tracing/123" passHref>
+        <Link
+          as={`/dashboard/tracing/${router.query.caseId}/def`}
+          href="/dashboard/tracing/[caseId]/[contactId]"
+          passHref
+        >
           <OutlineAnchorButton>Lihat Detil</OutlineAnchorButton>
         </Link>
       </div>
