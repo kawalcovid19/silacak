@@ -9,3 +9,4 @@ export * from "./secondary-button";
 export * from "./utils";
 export * from "./white-anchor-button";
 export * from "./white-button";
+export * from "./option-button";
