@@ -20,7 +20,7 @@ This is a revamp attempt of Silacak app, built using [Next.js](https://nextjs.or
 
 ## Purpose, Principles, and Guidelines
 
-The project's purpose, principles, and guidelines, take some cues from the [WargaBantuWarga.com](https://www.wargabantuwarga.com/) project.
+The project's purpose, principles, and guidelines take some cues from the [WargaBantuWarga.com](https://www.wargabantuwarga.com/) project.
 
 <!-- ### Purpose -->
 
@@ -113,11 +113,11 @@ When contributing to our project, please use English when communicating with oth
 
 ## API
 
-Our API documentation is in [api-refrence.md](docs/api-reference.md) file.
+Our API documentation is in [api-reference.md](docs/api-reference.md) file.
 
 ## Contributors ✨
 
-Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+Thanks go to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
@@ -142,4 +142,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!

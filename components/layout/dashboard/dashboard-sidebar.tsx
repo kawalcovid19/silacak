@@ -4,18 +4,24 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Fragment } from "react";
+import { Fragment, useRef } from "react";
 import { useDashboardStore } from "~/lib/layout/dashboard/dashboard-store";
 import { sidebarMenu } from "~/lib/layout/dashboard/sidebar-data";
 
 export function DashboardSidebar() {
   const router = useRouter();
   const { sidebarOpen, setSidebarOpen } = useDashboardStore(state => state);
+  const initialFocusItem = useRef(null);
 
   return (
     <>
       <Transition.Root as={Fragment} show={sidebarOpen}>
-        <Dialog as="div" className="fixed inset-0 flex z-40 md:hidden" onClose={setSidebarOpen}>
+        <Dialog
+          as="div"
+          className="fixed inset-0 flex z-40 md:hidden"
+          initialFocus={initialFocusItem}
+          onClose={setSidebarOpen}
+        >
           <Transition.Child
             as={Fragment}
             enter="transition-opacity ease-linear duration-300"
@@ -82,6 +88,7 @@ export function DashboardSidebar() {
                               : "text-gray-300 hover:bg-gray-700 hover:text-white",
                             "group flex items-center px-2 py-2 text-base font-medium rounded-md"
                           )}
+                          ref={isActive ? initialFocusItem : null}
                         >
                           <item.icon
                             aria-hidden="true"
