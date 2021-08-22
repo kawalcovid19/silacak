@@ -36,7 +36,7 @@ export default function TracingCaseContactDetail() {
           </div>
         </div>
       </DashboardPageHeader>
-      <DashboardPageContent>Content</DashboardPageContent>
+      <DashboardPageContent>Hello Content</DashboardPageContent>
     </DashboardPage>
   );
 }
