@@ -57,7 +57,10 @@ export default function Monitor() {
               <SectionCardHeader title="Pemantauan" />
               <div className="space-y-2">
                 <span className="font-light">Tanggal dilakukan kunjungan ulang</span>
-                <span className="text-2xl font-bold">Minggu, 08 Agustus 2021</span>
+                <br />
+                <span className="text-2xl font-bold">
+                  <GetTodayDate />
+                </span>
               </div>
               <QuarantineType />
               <MonitoringResult />
@@ -73,4 +76,28 @@ export default function Monitor() {
       </DashboardPageContent>
     </DashboardPage>
   );
+}
+
+function GetTodayDate() {
+  const dayName = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"];
+  const monthName = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+  const today = new Date();
+  const date = `${dayName[today.getDay()]}, ${today.getDate()}
+                ${monthName[today.getMonth()]}
+                ${today.getFullYear()}`;
+
+  return <span>{date}</span>;
 }
