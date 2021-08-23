@@ -13,7 +13,7 @@ export const SectionCardHeader = forwardRef<HTMLDivElement, SectionCardHeaderPro
           <div className="w-full border-t border-gray-300" />
         </div>
         <div className="relative flex flex-row items-center justify-start">
-          <span className="pr-3 bg-white text-md font-medium text-gray-900">{title}</span>
+          <span className="pr-3 bg-white text-md font-medium text-gray-900 uppercase">{title}</span>
         </div>
       </div>
     );

@@ -1,7 +1,8 @@
 import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { CaseInformationItem } from "~/components/cases/case-information-item";
+import { AddCloseContactButton } from "~/components/close-contact/add-close-contact-button";
+import { CloseContactCard } from "~/components/close-contact/close-contact-card";
 import {
   DashboardPage,
   DashboardPageHeader,
@@ -10,9 +11,9 @@ import {
 import { SectionCard, SectionCardHeader } from "~/components/ui/card";
 
 export default function TracingCaseDetail() {
-  const router = useRouter();
-
-  console.log(router.query.caseId);
+  const handleAddCloseContact = () => {
+    console.log("clicked");
+  };
 
   return (
     <DashboardPage>
@@ -35,7 +36,7 @@ export default function TracingCaseDetail() {
         </div>
       </DashboardPageHeader>
       <DashboardPageContent>
-        <div className="space-y-4">
+        <div className="space-y-8 pb-20 md:pb-0">
           <SectionCard className="space-y-6">
             <div className="space-y-4">
               <SectionCardHeader title="Informasi Utama" />
@@ -49,9 +50,38 @@ export default function TracingCaseDetail() {
               </div>
             </div>
           </SectionCard>
-          <div>Content Secondary (Daftar Kontak Erat, etc.)</div>
+          <div className="space-y-6">
+            <div className="md:flex md:items-center md:justify-between">
+              <div className="flex-1 min-w-0">
+                <h2 className="text-xl font-semibold leading-7 text-gray-900 sm:text-2xl sm:truncate">
+                  Daftar Kontak Erat Pasien
+                </h2>
+              </div>
+              <div className="hidden md:flex md:ml-4">
+                <AddCloseContactButton onClick={handleAddCloseContact} />
+              </div>
+            </div>
+            <div>
+              <div className="overflow-hidden rounded-md shadow bg-white">
+                <ul className="divide-y divide-gray-200">
+                  <li>
+                    <CloseContactCard />
+                  </li>
+                  <li>
+                    <CloseContactCard />
+                  </li>
+                  <li>
+                    <CloseContactCard />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </DashboardPageContent>
+      <div className="block md:hidden fixed bottom-0 w-full bg-white p-4 shadow-floating z-30">
+        <AddCloseContactButton onClick={handleAddCloseContact} />
+      </div>
     </DashboardPage>
   );
 }
