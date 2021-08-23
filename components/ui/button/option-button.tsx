@@ -15,23 +15,26 @@ export type OptionButtonProps = OptionBaseProps & ButtonProps;
  * @link https://tailwindui.com/components/application-ui/elements/buttons#component-80fd0d5ac7982f1a83b171bb0fb9e116
  */
 export const OptionButton = React.forwardRef<HTMLOptionElement, OptionButtonProps>(
-  ({
-    className,
-    style,
-    type,
-    block,
-    size = "md",
-    color = "silacak",
-    rounded,
-    icon,
-    iconPosition = "left",
-    isLoading,
-    loadingText = "Memuat...",
-    disabled,
-    children,
-    selected,
-    ...rest
-  }) => {
+  (
+    {
+      className,
+      style,
+      type,
+      block,
+      size = "md",
+      color = "silacak",
+      rounded,
+      icon,
+      iconPosition = "left",
+      isLoading,
+      loadingText = "Memuat...",
+      disabled,
+      children,
+      selected,
+      ...rest
+    },
+    _ref
+  ) => {
     if (selected) {
       return (
         <PrimaryButton
