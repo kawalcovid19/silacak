@@ -1,4 +1,4 @@
-import { useRouter } from "next/router";
+// import { useRouter } from "next/router";
 import { DashboardPage, DashboardPageContent } from "~/components/layout/dashboard";
 import { ConfirmedCasesCard } from "~/components/tracing/confirmed-cases-card";
 import { ConfirmedCasesHeader } from "~/components/tracing/confirmed-cases-header";
@@ -6,9 +6,9 @@ import { PrimaryButton } from "~/components/ui/button";
 import { FormLabel, InputSelect } from "~/components/ui/forms";
 
 export default function MonitoringList() {
-  const router = useRouter();
+  // const router = useRouter();
 
-  console.log("caseId", router.query.caseId);
+  // console.log("caseId", router.query.caseId);
 
   return (
     <DashboardPage>
