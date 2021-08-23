@@ -12,7 +12,7 @@
 - [List unit tracer by city district sub district id](#list-unit-tracer-by-city-district-sub-district-id)
 - [List puskesmas user by puskesmas name](#list-puskesmas-user-by-puskesmas-name)
 - [Detail User](#detail-user)
-- [Detail Confirmed Case](#detail-confirmed-case)
+- [Detail Confirmed Case](#detail-confirmed-case-close-contact)
 - [List Confirmed Cases](#list-confirmed-cases)
 - [Add Close Contact](#add-close-contact)
 - [List Program](#list-program)
@@ -21,6 +21,8 @@
 - [Check registration status](#check-registration-status)
 - [Attendance confirmed case](#attendance-confirmed-case)
 - [Cancelled confirmed case](#cancelled-confirmed-case)
+- [List close contact relationship](#list-close-contact-relationship)
+- [List Close Contact](#list-close-contact)
 
 ## Login
 ```yaml
@@ -161,23 +163,24 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/me' \
 
 ### CURL
 ```bash
-curl 'https://training-silacak.kemkes.go.id/api/users?fields=displayName%2Cid%2Caccess%2CuserCredentials%5Busername%2Cdisabled%2ClastLogin%2CtwoFA%5D%2CteiSearchOrganisationUnits%5Bid%2Cpath%5D&filter=userCredentials.username:eq:ngetestapi&fields=id' \
-  -H 'authority: silacak.kemkes.go.id' \
-  -H 'pragma: no-cache' \
-  -H 'cache-control: no-cache' \
+curl 'https://xreguser-silacak.kemkes.go.id/api/v1/user' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
   -H 'sec-ch-ua: "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"' \
-  -H 'accept: application/json, text/plain, */*' \
-  -H 'authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InNpbGFjYWstcmVnaXN0ZXIiLCJwYXNzd29yZCI6IlNpbGFjYWsyMDIxJSJ9.UdeRzHTJPmphbnQsDUdGr1r3huVA9STeakCXUZljsE0' \
   -H 'sec-ch-ua-mobile: ?0' \
-  -H 'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.131 Safari/537.36' \
-  -H 'origin: https://reg-silacak.kemkes.go.id' \
-  -H 'sec-fetch-site: same-site' \
-  -H 'sec-fetch-mode: cors' \
-  -H 'sec-fetch-dest: empty' \
-  -H 'referer: https://reg-silacak.kemkes.go.id/' \
-  -H 'accept-language: en-US,en;q=0.9' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36' \
+  -H 'Content-Type: application/json;charset=UTF-8' \
+  -H 'Origin: https://reg-silacak.kemkes.go.id' \
+  -H 'Sec-Fetch-Site: same-site' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://reg-silacak.kemkes.go.id/' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  --data-raw '{"id":"A7assORLEWP","userCredentials":{"id":"WowByiSOs6o","userInfo":{"id":"A7assORLEWP"},"cogsDimensionConstraints":[],"catDimensionConstraints":[],"username":"filipeinzagih","password":"Abcd123$","userRoles":[{"id":"pFucO02cX5a"}],"disabled":false},"surname":"inzagi","firstName":"inzagi","phoneNumber":"6281212123123","whatsApp":"+6281212123123","organisationUnits":[{"id":"xjIavKjvk64"}],"dataViewOrganisationUnits":[{"id":"xjIavKjvk64"}],"userGroups":[{"id":"JHG9qYNaKJ5"},{"id":"LNidQSYtXk5"},{"id":"otmsAgbOtqB"}],"teiSearchOrganisationUnits":[{"id":"xjIavKjvk64"}],"attributeValues":[]}' \
   --compressed
-
 ```
 
 ## List All Organization Units
@@ -644,11 +647,7 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/users/B
 ```
 
 
-
-
-
-
-## Detail Confirmed Case
+## Detail Confirmed Case / Close Contact
 ### CURL
 ```bash
 curl --location --request GET 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances/Y8pSX7O6Uy8.json?program=gZrezya1BvN&ou=xtpPPC95Tjl&attribute=vyWUq8BAnwg,GdwLfGObIRT,taFkwTiKFyR,xu1Ukzi0PMJ,fk5drl1hTvc,quJD4An7Kmi,mHwPpgxFDge,e25qAod3KTg,YlOp8W4FYRH&fields=*&order=lastUpdated:DESC' \
@@ -682,16 +681,16 @@ GET /api/trackedEntityInstances?program=<programId>&fields=*&pageSize=1&ou=<orgI
 | program          | string | program id                                        |
 | fields           | string | select one or more [field](#tracked-entity) to return possible value |
 | orgId            | string | organization id                                   |
-| programStatus    | string | Program status (ACTIVE, CANCELLED, OPEN, CLOSE)   |
-| programStartDate | string | program start date format yyyy-mm-dd              |
+| programStatus    | string | Enrollment status (ACTIVE, CANCELLED, COMPLETED)   |
+| programStartDate? | string | Enrollment start date format yyyy-mm-dd              |
 | order            | string | order by fields example : lasUpdated:DESC         |
-| programEndDate   | string | program end date format yyyy-mm-dd                |
+| programEndDate?   | string | Enrollment end date format yyyy-mm-dd                |
 
 
 ### CURL
 
 ```bash
-curl --location --request GET 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances.json?program=gZrezya1BvN&fields=attributes,trackedEntityInstance,created,lastUpdated&pageSize=1&ou=IU2HDuYpTnY&programStatus=ACTIVE&programStartDate=2021-01-01&order=lastUpdated:DESC&programEndDate=2021-07-31' \
+curl --location --request GET 'https://training-silacak.kemkes.go.id/api/trackedEntityInstances.json?program=gZrezya1BvN&fields=*&pageSize=1&ou=IU2HDuYpTnY&programStatus=ACTIVE&programStartDate=2021-01-01&order=lastUpdated:DESC&programEndDate=2021-07-31' \
 --header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU='
 ```
 
@@ -704,6 +703,67 @@ curl --location --request GET 'https://training-silacak.kemkes.go.id/api/tracked
       "lastUpdated": "2021-04-23T11:29:51.971",
       "created": "2021-02-11T09:56:12.195",
       "trackedEntityInstance": "I9VcnElirev",
+      "enrollments": [
+                {
+                    "storedBy": "latihan",
+                    "created": "2021-07-31T00:35:53.896",
+                    "orgUnit": "IU2HDuYpTnY",
+                    "createdAtClient": "2021-07-31T00:35:53.901",
+                    "program": "gZrezya1BvN",
+                    "trackedEntityInstance": "Zohhm7Nti0K",
+                    "enrollment": "Hgiqz6FBr5s",
+                    "lastUpdated": "2021-07-31T00:36:09.853",
+                    "trackedEntityType": "bHRcIH36xIk",
+                    "lastUpdatedAtClient": "2021-07-31T00:36:09.853",
+                    "orgUnitName": "99010101 - PUSKEMAS LATIHAN",
+                    "enrollmentDate": "2021-07-31T00:35:53.896",
+                    "deleted": false,
+                    "incidentDate": "2021-07-31T00:00:00.000",
+                    "status": "ACTIVE",
+                    "notes": [],
+                    "relationships": [],
+                    "attributes": [],
+                    "events": [
+                        {
+                            "storedBy": "latihan",
+                            "dueDate": "2021-07-31T00:35:53.964",
+                            "program": "gZrezya1BvN",
+                            "event": "GKFEH3Up5JU",
+                            "programStage": "f4fobgMaOCr",
+                            "orgUnit": "IU2HDuYpTnY",
+                            "trackedEntityInstance": "Zohhm7Nti0K",
+                            "enrollment": "Hgiqz6FBr5s",
+                            "enrollmentStatus": "ACTIVE",
+                            "status": "ACTIVE",
+                            "orgUnitName": "99010101 - PUSKEMAS LATIHAN",
+                            "eventDate": "2021-07-31T00:00:00.000",
+                            "attributeCategoryOptions": "xYerKDKCefk",
+                            "lastUpdated": "2021-07-31T00:36:09.867",
+                            "created": "2021-07-31T00:35:53.964",
+                            "deleted": false,
+                            "attributeOptionCombo": "HllvX50cXC0",
+                            "dataValues": [
+                                {
+                                    "lastUpdated": "2021-07-31T00:36:09.863",
+                                    "created": "2021-07-31T00:35:53.960",
+                                    "dataElement": "YDFddaT2uDO",
+                                    "value": "Ya",
+                                    "providedElsewhere": false
+                                },
+                                {
+                                    "lastUpdated": "2021-07-31T00:36:09.863",
+                                    "created": "2021-07-31T00:35:53.960",
+                                    "dataElement": "A9htpJFLuIr",
+                                    "value": "Kasus Konfirmasi",
+                                    "providedElsewhere": false
+                                }
+                            ],
+                            "notes": [],
+                            "relationships": []
+                        }
+                    ]
+                }
+      ],
       "attributes": [
                 {
                     "lastUpdated": "2021-04-22T00:00:00.000",
@@ -1235,6 +1295,28 @@ PUT /api/enrollments/<enrollmentId>/cancelled
 curl --location --request PUT 'https://training-silacak.kemkes.go.id/api/enrollments/w2MAaj5NhAF/cancelled' \
 --header 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
 --header 'Cookie: BIGipServerpool_silacakprod_training_http=3945834688.47873.0000; SESSION=ODBmNDQ4N2ItOTk0ZC00OWE1LTkxYWEtNDFkN2IyOTU1N2Vk'
+```
+
+## List Close Contact Relationship
+
+### CURL
+```bash
+curl 'https://training-silacak.kemkes.go.id/api/relationships.json?tei=WeIYcNglRWn' \
+  -H 'Connection: keep-alive' \
+  -H 'Pragma: no-cache' \
+  -H 'Cache-Control: no-cache' \
+  -H 'sec-ch-ua: "Chromium";v="92", " Not A;Brand";v="99", "Google Chrome";v="92"' \
+  -H 'Accept: application/json' \
+  -H 'Authorization: Basic bGF0aWhhbjpTaWxhY2FrMjAyMSU=' \
+  -H 'sec-ch-ua-mobile: ?0' \
+  -H 'User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36' \
+  -H 'Sec-Fetch-Site: same-origin' \
+  -H 'Sec-Fetch-Mode: cors' \
+  -H 'Sec-Fetch-Dest: empty' \
+  -H 'Referer: https://training-silacak.kemkes.go.id/2.7/' \
+  -H 'Accept-Language: en-US,en;q=0.9' \
+  -H 'Cookie: _ga_3G84467XDE=GS1.1.1627607504.1.1.1627608321.0; _ga=GA1.3.1254493070.1627607505; BIGipServerpool_silacakprod_training_http=3945834688.47873.0000; _gid=GA1.3.105791207.1629721859; SESSION=ZGVkZTZmN2UtMTZiZC00ZTZjLWIyNGQtZmE5ZTY4YTBiZWI0; _gat=1' \
+  --compressed
 ```
 
 ## Field
