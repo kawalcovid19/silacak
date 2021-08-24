@@ -44,3 +44,8 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Cypress
+cypress/integration/1-getting-started
+cypress/integration/2-advanced-examples
+cypress/screenshots
