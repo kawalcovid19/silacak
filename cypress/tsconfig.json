@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/cypress/tsconfig.json",
+
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Cypress",
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es5", "dom"],
+    "types": ["cypress"]
+  },
+
+  "include": ["../next-env.d.ts", "../**/*.ts", "../**/*.tsx", "../pages/dashboard/monitoring"],
+  "exclude": ["../node_modules"]
+}
