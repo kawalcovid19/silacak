@@ -20,7 +20,8 @@
         "security",
         "tool",
         "doc",
-        "test"
+        "test",
+        "bug"
       ]
     },
     {
@@ -65,7 +66,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/1397612?v=4",
       "profile": "https://github.com/asaadam",
       "contributions": [
-        "doc"
+        "doc",
+        "security"
       ]
     },
     {
@@ -87,6 +89,42 @@
         "projectManagement",
         "doc",
         "ideas"
+      ]
+    },
+    {
+      "login": "dekwahdimas",
+      "name": "IGN Bagus Dimas W.",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56619123?v=4",
+      "profile": "https://github.com/dekwahdimas",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "adibfirman",
+      "name": "Adib Firman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24794196?v=4",
+      "profile": "http://adibfirman.github.io",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mukhlisakbr",
+      "name": "Mukhlis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/27577560?v=4",
+      "profile": "http://mukhlis.id",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "hanihusam",
+      "name": "Hani Husamuddin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25399426?v=4",
+      "profile": "https://www.linkedin.com/in/hanihusam/",
+      "contributions": [
+        "code"
       ]
     }
   ],

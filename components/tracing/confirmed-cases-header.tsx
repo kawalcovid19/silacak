@@ -18,4 +18,4 @@ export const ConfirmedCasesHeader = forwardRef<HTMLDivElement, ConfirmedCasesHea
   }
 );
 
-ConfirmedCasesHeader.displayName = "DashboardPageHeader";
+ConfirmedCasesHeader.displayName = "ConfirmedCaseHeader";
