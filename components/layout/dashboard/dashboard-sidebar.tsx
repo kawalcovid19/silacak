@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Fragment, useRef } from "react";
+import { Fragment, useEffect, useRef } from "react";
 import { useDashboardStore } from "~/lib/layout/dashboard/dashboard-store";
 import { sidebarMenu } from "~/lib/layout/dashboard/sidebar-data";
 
@@ -12,6 +12,20 @@ export function DashboardSidebar() {
   const router = useRouter();
   const { sidebarOpen, setSidebarOpen } = useDashboardStore(state => state);
   const initialFocusItem = useRef(null);
+
+  useEffect(() => {
+    const handleBeforeHistoryChange = () => {
+      if (sidebarOpen) {
+        setSidebarOpen(false);
+      }
+    };
+
+    router.events.on("beforeHistoryChange", handleBeforeHistoryChange);
+
+    return () => {
+      router.events.off("beforeHistoryChange", handleBeforeHistoryChange);
+    };
+  }, [router.events, sidebarOpen, setSidebarOpen]);
 
   return (
     <>
