@@ -67,7 +67,8 @@
       "profile": "https://github.com/asaadam",
       "contributions": [
         "doc",
-        "security"
+        "security",
+        "test"
       ]
     },
     {
@@ -97,7 +98,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/56619123?v=4",
       "profile": "https://github.com/dekwahdimas",
       "contributions": [
-        "code"
+        "code",
+        "test",
+        "tool"
       ]
     },
     {
