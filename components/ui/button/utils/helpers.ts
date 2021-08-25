@@ -75,6 +75,9 @@ export function primaryButtonColors(color?: ButtonColors) {
     case "brand": {
       return "text-white bg-brand-500 hover:bg-brand-600 focus:ring-brand-500";
     }
+    case "silacak": {
+      return "text-white bg-silacak-500 hover:bg-silacak-600 focus:ring-silacak-500";
+    }
     case "blue": {
       return "text-white bg-blue-600 hover:bg-blue-700 focus:ring-blue-500";
     }
@@ -116,6 +119,9 @@ export function secondaryButtonColors(color?: ButtonColors) {
     case "brand": {
       return "text-brand-700 bg-brand-100 hover:bg-brand-200 focus:ring-brand-500";
     }
+    case "silacak": {
+      return "text-silacak-700 bg-silacak-100 hover:bg-silacak-200 focus:ring-silacak-500";
+    }
     case "blue": {
       return "text-blue-700 bg-blue-100 hover:bg-blue-200 focus:ring-blue-500";
     }
@@ -156,6 +162,9 @@ export function outlineButtonColors(color?: ButtonColors) {
   switch (color) {
     case "brand": {
       return "text-brand-500 border-brand-500 hover:bg-blue-100 focus:ring-brand-500";
+    }
+    case "silacak": {
+      return "text-silacak-500 border-silacak-500 hover:bg-silacak-100 focus:ring-silacak-500";
     }
     case "blue": {
       return "text-blue-500 border-blue-500 hover:bg-blue-100 focus:ring-blue-500";
