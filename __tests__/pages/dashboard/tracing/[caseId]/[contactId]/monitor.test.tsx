@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import React from "react";
 import Monitor from "~/pages/dashboard/tracing/[caseId]/[contactId]/monitor";
 
@@ -29,75 +30,35 @@ describe("Monitor", () => {
     render(<Monitor />);
     expect(screen.getByText(/jenis karantina/i));
     expect(screen.getByRole("button", { name: /tidak karantina/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /tidak karantina/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /tidak karantina/i }));
     expect(screen.getByRole("button", { name: /karantina mandiri di rumah/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /karantina mandiri di rumah/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /karantina mandiri di rumah/i }));
     expect(screen.getByRole("button", { name: /karantina mandiri di fasilitas khusus/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /karantina mandiri di fasilitas khusus/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /karantina mandiri di fasilitas khusus/i }));
     expect(screen.getByText(/nama lokasi karantina/i));
   });
 
   it("render `Hasil Pemantauan` section corectly", () => {
     render(<Monitor />);
     expect(screen.getByRole("button", { name: /sehat/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /sehat/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /sehat/i }));
     expect(screen.getByRole("button", { name: /bergejala \(suspek\)/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /bergejala \(suspek\)/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /bergejala \(suspek\)/i }));
     expect(screen.getByRole("button", { name: /terdapat gejala lain/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /terdapat gejala lain/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /terdapat gejala lain/i }));
     expect(screen.getByText(/ageusia \(hilang indra perasa\/pengecap\)/i));
     expect(screen.getByRole("button", { name: /rujuk rs/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /rujuk rs/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /rujuk rs/i }));
     expect(screen.getByRole("button", { name: /meninggal/i }));
-    fireEvent(
-      screen.getByRole("button", { name: /meninggal/i }),
-      new MouseEvent("click", {
-        bubbles: true,
-        cancelable: true,
-      })
-    );
+
+    userEvent.click(screen.getByRole("button", { name: /meninggal/i }));
   });
 
   it("render `Simpan Data` button corectly", () => {
