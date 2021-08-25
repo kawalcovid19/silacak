@@ -1,0 +1,13 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: mailto:admin@kawalcovid19.id
+Expires: 2022-08-15T17:00:00.000Z
+Preferred-Languages: en, id
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQT6sN6wpKfVQbzjWj3BUpOGUQHUWAUCYRjrBgAKCRDBUpOGUQHU
+WNeoAQCehxD7w7KsPVL+5uKiqFd17dVPuXjv406GyM0tAZfiGQEAmfC7Q9jmfdxw
+WytaXptWOztmbAeo1FNKaPoOz+HV1QU=
+=xR0n
+-----END PGP SIGNATURE-----
