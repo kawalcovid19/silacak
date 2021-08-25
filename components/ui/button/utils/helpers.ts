@@ -7,7 +7,7 @@ export const disabledStyles = "disabled:cursor-not-allowed disabled:opacity-75";
 
 export function buttonBlockStyles(block?: boolean, iconPosition: ButtonIconPositions = "left") {
   return [
-    block ? "flex" : "inline-flex",
+    block ? "flex w-full" : "inline-flex",
     iconPosition === "right" ? "flex-row-reverse" : "flex-row",
   ];
 }
