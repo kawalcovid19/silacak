@@ -20,7 +20,8 @@
         "security",
         "tool",
         "doc",
-        "test"
+        "test",
+        "bug"
       ]
     },
     {
