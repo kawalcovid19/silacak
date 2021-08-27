@@ -5,8 +5,6 @@ import { PrimaryButton } from "~/components/ui/button";
 import { FormLabel, InputSelect } from "~/components/ui/forms";
 
 export default function MonitoringList() {
-  // console.log("caseId", router.query.caseId);
-
   return (
     <DashboardPage>
       <ConfirmedCasesHeader>
