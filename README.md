@@ -3,7 +3,7 @@
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
@@ -137,6 +137,7 @@ Thanks go to these wonderful people ([emoji key](https://allcontributors.org/doc
     <td align="center"><a href="http://adibfirman.github.io"><img src="https://avatars.githubusercontent.com/u/24794196?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Adib Firman</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=adibfirman" title="Code">💻</a></td>
     <td align="center"><a href="http://mukhlis.id"><img src="https://avatars.githubusercontent.com/u/27577560?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mukhlis</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=mukhlisakbr" title="Documentation">📖</a></td>
     <td align="center"><a href="https://www.linkedin.com/in/hanihusam/"><img src="https://avatars.githubusercontent.com/u/25399426?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hani Husamuddin</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=hanihusam" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/tyangjawi03"><img src="https://avatars.githubusercontent.com/u/7666467?v=4?s=100" width="100px;" alt=""/><br /><sub><b>tyangjawi03</b></sub></a><br /><a href="https://github.com/kawalcovid19/silacak/commits?author=tyangjawi03" title="Code">💻</a></td>
   </tr>
 </table>
 
