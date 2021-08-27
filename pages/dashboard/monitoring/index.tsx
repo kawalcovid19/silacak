@@ -6,8 +6,6 @@ import { PrimaryButton } from "~/components/ui/button";
 import { FormLabel, InputSelect } from "~/components/ui/forms";
 
 export default function MonitoringList() {
-  // const router = useRouter();
-
   // console.log("caseId", router.query.caseId);
 
   return (
