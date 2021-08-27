@@ -1,7 +1,7 @@
 import { ArrowCircleLeftIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { CloseContactCard } from "~/components/contact/close-contact-card";
+import { CloseContactDetailCard } from "~/components/close-contact/close-contact-detail-card";
 import {
   DashboardPage,
   DashboardPageHeader,
@@ -35,7 +35,7 @@ export default function TracingCaseContactDetail() {
         </div>
       </DashboardPageHeader>
       <DashboardPageContent>
-        <CloseContactCard />
+        <CloseContactDetailCard />
       </DashboardPageContent>
     </DashboardPage>
   );
