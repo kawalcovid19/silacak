@@ -1,4 +1,3 @@
-// import { useRouter } from "next/router";
 import { DashboardPage, DashboardPageContent } from "~/components/layout/dashboard";
 import { ConfirmedCasesCard } from "~/components/tracing/confirmed-cases-card";
 import { ConfirmedCasesHeader } from "~/components/tracing/confirmed-cases-header";
